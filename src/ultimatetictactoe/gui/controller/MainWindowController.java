@@ -3,23 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ultimatetictactoe;
+package ultimatetictactoe.gui.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 /**
  *
  * @author Dominik
  */
-public class FXMLDocumentController implements Initializable {
+public class MainWindowController implements Initializable {
     
     @FXML
     private Label label;
+    @FXML
+    private Button button;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {

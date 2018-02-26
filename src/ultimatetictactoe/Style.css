@@ -1,0 +1,11 @@
+.macroBoard {
+    -fx-backgound-color: white;
+}
+
+.microBoard {
+   -fx-background-color: gray; 
+}
+
+.button {
+    -fx-background-color: lightgray;
+}

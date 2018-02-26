@@ -19,11 +19,11 @@ public class MainWindowController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }
 
     @FXML
     private void btnClicked(ActionEvent event) {
+        
     }
-
 }

@@ -10,5 +10,14 @@ package ultimatetictactoe.gui.model;
  * @author Dominik
  */
 public class Model {
-    
+
+    Model instance;
+
+    public Model getInstance() {
+        if (instance == null) {
+            instance = new Model();
+        }
+        return instance;
+    }
+
 }

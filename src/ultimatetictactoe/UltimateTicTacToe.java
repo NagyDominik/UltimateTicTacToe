@@ -22,6 +22,7 @@ public class UltimateTicTacToe extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("gui/view/MainWindow.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Ultimate TicTacToe");
         stage.show();
     }
 

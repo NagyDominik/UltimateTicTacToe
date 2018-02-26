@@ -1,6 +1,8 @@
 package ultimatetictactoe.bll.game;
 
 import ultimatetictactoe.bll.bot.IBot;
+import ultimatetictactoe.bll.field.GameField;
+import ultimatetictactoe.bll.field.IField;
 import ultimatetictactoe.bll.move.IMove;
 
 /**
@@ -29,7 +31,7 @@ public class GameManager {
     private GameMode mode = GameMode.HumanVsHuman;
     private IBot bot = null;
     private IBot bot2 = null;
-
+    
     /**
      * Set's the currentState so the game can begin.
      * Game expected to be played Human vs Human
@@ -127,18 +129,20 @@ public class GameManager {
         //NOTE: should also check whether the move is placed on an occupied spot.
         System.out.println("Checking move validity against macroboard available field");
         System.out.println("Not currently checking move validity actual board");
+        if (!currentState.getField().isEmpty()) //Can only place mark on an empty field.
+        {
+            return false;
+        }
         return currentState.getField().isInActiveMicroboard(move.getX(), move.getY());
     }
     
     private void UpdateBoard(IMove move)
     {
-       //TODO: Update the board to the new state 
-        throw new UnsupportedOperationException("Not supported yet."); 
+        currentState.getField().getBoard()[move.getX()][move.getY()] = "X";
     }
     
     private void UpdateMacroboard(IMove move)
     {
-       //TODO: Update the macroboard to the new state 
-       throw new UnsupportedOperationException("Not supported yet."); 
+        currentState.getField().getMacroboard()[1][1] = "X";
     }
 }

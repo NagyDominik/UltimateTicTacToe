@@ -16,6 +16,7 @@ import ultimatetictactoe.bll.move.IMove;
 public class GameField implements IField {
 
     private String[][] board = new String[9][9];
+    private String[][] macroBoard = new String[3][3];
     private List<IMove> moves = new ArrayList();
 
     @Override
@@ -67,11 +68,7 @@ public class GameField implements IField {
 
     @Override
     public Boolean isInActiveMicroboard(int x, int y) {
-        if (board[y][x] == IField.AVAILABLE_FIELD) {
-            return true;
-        } else {
-            return false;
-        }
+        return board[y][x] == IField.AVAILABLE_FIELD;
     }
 
     @Override
@@ -81,7 +78,7 @@ public class GameField implements IField {
 
     @Override
     public String[][] getMacroboard() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return macroBoard;
     }
 
     @Override
@@ -93,5 +90,9 @@ public class GameField implements IField {
     public void setMacroboard(String[][] macroboard) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    public void updateBoard(int x, int y)
+    {
+        board[x][y] = "X";
+    }
 }

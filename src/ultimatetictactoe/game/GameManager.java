@@ -1,6 +1,7 @@
 package ultimatetictactoe.game;
 
 import ultimatetictactoe.bot.IBot;
+import game.IGameState;
 import move.IMove;
 
 /**

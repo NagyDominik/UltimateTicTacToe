@@ -23,6 +23,7 @@ public class UltimateTicTacToe extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Ultimate TicTacToe");
+        stage.setResizable(false);
         stage.show();
     }
 

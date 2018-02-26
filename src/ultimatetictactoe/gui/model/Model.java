@@ -5,6 +5,8 @@
  */
 package ultimatetictactoe.gui.model;
 
+import ultimatetictactoe.bll.game.GameManager;
+
 /**
  *
  * @author Dominik
@@ -12,6 +14,7 @@ package ultimatetictactoe.gui.model;
 public class Model {
 
     Model instance;
+    GameManager gamemanager;
 
     public Model getInstance() {
         if (instance == null) {

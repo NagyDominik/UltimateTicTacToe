@@ -1,9 +1,9 @@
 .macroBoard {
-    -fx-background-color: white;
+    -fx-background-color: gray;
 }
 
-.microBoard {
-    -fx-background-color: gray; 
+.Board {
+    -fx-background-color: white; 
 }
 
 .button {

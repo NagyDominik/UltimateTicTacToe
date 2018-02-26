@@ -1,7 +1,7 @@
-package ultimatetictactoe.field;
+package ultimatetictactoe.bll.field;
 
 import java.util.List;
-import ultimatetictactoe.move.IMove;
+import ultimatetictactoe.bll.move.IMove;
 
 /**
  *

@@ -5,37 +5,57 @@
  */
 package ultimatetictactoe.bll.game;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import ultimatetictactoe.bll.field.IField;
 
 /**
  *
  * @author Dominik
  */
-public class GameState implements IGameState{
+public class GameState implements IGameState {
+
+    private IField field;
+    private final IntegerProperty moveCount = new SimpleIntegerProperty();
+    private final IntegerProperty roundCount = new SimpleIntegerProperty();
+
+    public GameState() {
+    }
+
+    public GameState(IField field) {
+        this.field = field;
+    }
 
     @Override
     public IField getField() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return field;
     }
 
     @Override
     public int getMoveNumber() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.moveCount.get();
     }
 
     @Override
     public void setMoveNumber(int moveNumber) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.moveCount.set(moveNumber);
     }
 
     @Override
     public int getRoundNumber() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return roundCount.get();
     }
 
     @Override
     public void setRoundNumber(int roundNumber) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.roundCount.set(roundNumber);
     }
-    
+
+    public IntegerProperty roundCountProperty() {
+        return roundCount;
+    }
+
+    public IntegerProperty moveCountProperty() {
+        return moveCount;
+    }
 }

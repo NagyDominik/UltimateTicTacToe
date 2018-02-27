@@ -22,8 +22,8 @@ public class GameManager {
      */
     public enum GameMode{
         HumanVsHuman,
-        HumanVsBot,
-        BotVsBot
+        HumanVsComputer,
+        ComputerVsComputer
     }
     
     private final IGameState currentState;
@@ -52,7 +52,7 @@ public class GameManager {
      */
     public GameManager(IGameState currentState, IBot bot) {
         this.currentState = currentState;
-        mode = GameMode.HumanVsBot;
+        mode = GameMode.HumanVsComputer;
         this.bot = bot;
     }
     
@@ -66,7 +66,7 @@ public class GameManager {
      */
     public GameManager(IGameState currentState, IBot bot, IBot bot2) {
         this.currentState = currentState;
-        mode = GameMode.BotVsBot;
+        mode = GameMode.ComputerVsComputer;
         this.bot = bot;
         this.bot2 = bot2;
     }
@@ -104,7 +104,7 @@ public class GameManager {
         assert(mode != GameMode.HumanVsHuman);
         
         //Check if player is bot, if so, get bot input and update the state based on that.
-        if(mode == GameMode.HumanVsBot && currentPlayer == 1)
+        if(mode == GameMode.HumanVsComputer && currentPlayer == 1)
         {
             //Check bot is not equal to null, and throw an exception if it is.
             assert(bot != null);

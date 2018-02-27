@@ -13,8 +13,8 @@ import ultimatetictactoe.bll.game.GameManager;
  */
 public class Model {
 
-    Model instance;
-    GameManager gamemanager;
+    private static Model instance;
+    private GameManager gamemanager;
 
     public Model getInstance() {
         if (instance == null) {

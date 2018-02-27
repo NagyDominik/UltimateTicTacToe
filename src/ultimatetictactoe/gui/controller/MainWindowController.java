@@ -39,7 +39,7 @@ public class MainWindowController implements Initializable {
     }
 
     @FXML
-    private void btnClicked(ActionEvent event) {
+    private void btnClicked(ActionEvent event) throws Exception {
         Button srcButton = (Button) event.getSource();
         int buttonId = Integer.parseInt(srcButton.getId());
         int macroId = Integer.parseInt(srcButton.getParent().getId());
@@ -49,7 +49,11 @@ public class MainWindowController implements Initializable {
         
         String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId;
         System.out.println(result);
-        //model.playMove(x, y); 
+       
+//        if(!model.playMove(x, y))
+//        {
+//            throw new Exception("Unable to play move!");
+//        }
     }
     
     /**

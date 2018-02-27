@@ -18,7 +18,7 @@ public class GameField implements IField {
     private String[][] board = new String[9][9];
     private String[][] macroBoard = new String[3][3];
     private List<IMove> moves = new ArrayList();
-
+    
     @Override
     public void clearBoard() {
         for (int i = 0; i < 9; i++) {
@@ -73,6 +73,7 @@ public class GameField implements IField {
 
     @Override
     public Boolean isInActiveMicroboard(int x, int y) {
+        //return macroBoard[x][y] == AVAILABLE_FIELD;
         return true;
     }
 

@@ -83,7 +83,13 @@ public class GameManager {
         if (!VerifyMoveLegality(move)) {
             return false;
         }
-
+        
+        int x = move.getX();
+        int y = move.getY();
+       
+        String[][] newMacro = new String[3][3];
+        //newMacro[][] = 
+        
         //Update the currentState
         UpdateBoard(move);
         UpdateMacroboard(move);

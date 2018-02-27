@@ -6,6 +6,8 @@
 package ultimatetictactoe.gui.controller;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -52,31 +54,50 @@ public class MainWindowController implements Initializable {
      */
     private void setUpIds()
     {
-        int btnId = 0;
-        int grdId = 0;
         for (Object o : gridPaneMain.getChildren())
         {
             if (GridPane.class.isInstance(o))
             {
                 GridPane pane = (GridPane) o;
-                pane.setId(Integer.toString(grdId));
-                
+                int col = gridPaneMain.getColumnIndex(pane);
+                int row = gridPaneMain.getRowIndex(pane);
+                //pane.setId(+col+")"));
+                System.out.println("Out");
+                                
                 for (Object o2 : pane.getChildren()) {
                     if (Button.class.isInstance(o2)) {
                         Button b = (Button) o2;
-                        b.setId(Integer.toString(btnId));
-                        btnId++;
+                        int btnCol = pane.getColumnIndex(b);
+                        int btnRow = pane.getRowIndex(b);
+                        b.setId(Integer.toString(col*3 + row*27 + btnCol + btnRow*9));
+
                     }
                 }
-                grdId++;
             }
         }
+        
+        for (int i = 0; i < 3; i++)
+        {
+            
+        }
+     
     }
+    
+    /**
+     * Dividing the id number with the size of the matrix (9) returns the row number.
+     * @param buttonId The id of the button.
+     * @return The x coordinate of the button.
+     */
     private int getX(int buttonId)
     {
         return buttonId/9;
     }
 
+    /**
+     * Performing mudolo on the id with the size of the matrix (9) returns the column number.
+     * @param buttonId The id of the button.
+     * @return The y coordinate of the button.
+     */
     private int getY(int buttonId)
     {
         return buttonId%9;

@@ -5,10 +5,7 @@
  */
 package ultimatetictactoe.gui.controller;
 
-import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -46,9 +43,12 @@ public class MainWindowController implements Initializable {
         Button srcButton = (Button) event.getSource();
         int buttonId = Integer.parseInt(srcButton.getId());
         int macroId = Integer.parseInt(srcButton.getParent().getId());
-        System.out.println(buttonId);
-        System.out.println(macroId);
         
+        int x = getX(buttonId);
+        int y = getY(buttonId);
+        
+        String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId;
+        System.out.println(result);
         //model.playMove(x, y); 
     }
     
@@ -57,16 +57,17 @@ public class MainWindowController implements Initializable {
      */
     private void setUpIds()
     {
+        int gridId = 0;
         for (Object o : gridPaneMain.getChildren())
         {
             if (GridPane.class.isInstance(o))
             {
                 GridPane pane = (GridPane) o;
+                pane.setId(Integer.toString(gridId));
+                
                 int col = GridPane.getColumnIndex(pane);
                 int row = GridPane.getRowIndex(pane);
-                //pane.setId(+col+")"));
-                System.out.println("Out");
-                                
+                
                 for (Object o2 : pane.getChildren()) {
                     if (Button.class.isInstance(o2)) {
                         Button b = (Button) o2;
@@ -77,6 +78,7 @@ public class MainWindowController implements Initializable {
                     }
                 }
             }
+            gridId++;
         }
      
     }
@@ -89,5 +91,25 @@ public class MainWindowController implements Initializable {
         stage.setScene(new Scene(root));
         stage.setResizable(false);
         stage.show();
+    }
+    
+    /**
+     * If we divide the id of a given button with the size of the matrix (9), the whole part of the result will be the x coordinate.
+     * @param id The ID of the clicked button.
+     * @return The X coordinate of the clicked button;
+     */
+    private int getX(int id)
+    {
+        return id/9;
+    }
+    
+    /**
+     * If we modulo the id of a given button with the size of the matrix (9), the result will be the y coordinate.
+     * @param id The ID of the clicked button.
+     * @return The Y coordinate of the clicked button;
+     */
+    private int getY(int id)
+    {
+        return id%9;
     }
 }

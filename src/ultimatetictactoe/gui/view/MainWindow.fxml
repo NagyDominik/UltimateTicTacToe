@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="0" maxHeight="635.0" maxWidth="600.0" minHeight="635.0" minWidth="600.0" prefHeight="635.0" prefWidth="600.0" style="-fx-background-color: #592D23;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ultimatetictactoe.gui.controller.MainWindowController">
+<AnchorPane id="0" maxHeight="635.0" maxWidth="600.0" minHeight="635.0" minWidth="600.0" prefHeight="635.0" prefWidth="600.0" style="-fx-background-color: #592D23;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ultimatetictactoe.gui.controller.MainWindowController">
    <children>
       <GridPane fx:id="gridPaneMain" maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" styleClass="Board" stylesheets="@../../Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <columnConstraints>
@@ -106,13 +106,13 @@
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
-                  </JFXButton>1
+                  </JFXButton>
                   <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1" >
+                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -159,7 +159,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css"  GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -221,7 +221,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css"  GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -283,17 +283,17 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css"  GridPane.columnIndex="0" GridPane.rowIndex="0"> 
+                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0"> 
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1"  GridPane.rowIndex="0">
+                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2"  GridPane.rowIndex="0">
+                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -355,7 +355,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0" >
+                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -437,7 +437,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2" >
+                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -541,7 +541,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -556,7 +556,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css"  GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>

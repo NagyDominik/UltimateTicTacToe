@@ -21,12 +21,13 @@ import ultimatetictactoe.gui.model.Model;
  */
 public class MainWindowController implements Initializable {
 
-    private final Model model = Model.getInstance();
     @FXML
     private GridPane gridPaneMain;
     @FXML
     private Label lblTurn;
     
+    private final Model model = Model.getInstance();
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         setUpIds();
@@ -59,10 +60,9 @@ public class MainWindowController implements Initializable {
             {
                 GridPane pane = (GridPane) o;
                 pane.setId(Integer.toString(grdId));
-                for (Object o2 : pane.getChildren())
-                {
-                    if (Button.class.isInstance(o2))
-                    {
+                
+                for (Object o2 : pane.getChildren()) {
+                    if (Button.class.isInstance(o2)) {
                         Button b = (Button) o2;
                         b.setId(Integer.toString(btnId));
                         btnId++;
@@ -72,7 +72,6 @@ public class MainWindowController implements Initializable {
             }
         }
     }
-
     private int getX(int buttonId)
     {
         return buttonId/9;

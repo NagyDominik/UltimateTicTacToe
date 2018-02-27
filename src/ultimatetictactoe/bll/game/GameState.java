@@ -59,4 +59,5 @@ public class GameState implements IGameState {
     public IntegerProperty moveCountProperty() {
         return moveCount;
     }
+
 }

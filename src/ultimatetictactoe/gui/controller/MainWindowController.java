@@ -32,26 +32,32 @@ public class MainWindowController implements Initializable {
     @FXML
     private void btnClicked(ActionEvent event) {
         Button srcButton = (Button) event.getSource();
-        System.out.println(srcButton.getId());
+        int buttonId = Integer.parseInt(srcButton.getId());
+        int macroId = Integer.parseInt(srcButton.getParent().getId());
+        System.out.println(buttonId);
+        System.out.println(macroId);
     }
     
     private void setUpIds()
     {
-        int id = 0;
+        int btnId = 0;
+        int grdId = 0;
         for (Object o : gridPaniMain.getChildren())
         {
             if (GridPane.class.isInstance(o))
             {
                 GridPane pane = (GridPane) o;
+                pane.setId(Integer.toString(grdId));
                 for (Object o2 : pane.getChildren())
                 {
                     if (Button.class.isInstance(o2))
                     {
                         Button b = (Button) o2;
-                        b.setId(Integer.toString(id));
-                        id++;
+                        b.setId(Integer.toString(btnId));
+                        btnId++;
                     }
                 }
+                grdId++;
             }
         }
     }

@@ -5,7 +5,11 @@
  */
 package ultimatetictactoe.gui.model;
 
+import ultimatetictactoe.bll.field.GameField;
 import ultimatetictactoe.bll.game.GameManager;
+import ultimatetictactoe.bll.game.GameState;
+import ultimatetictactoe.bll.move.IMove;
+import ultimatetictactoe.bll.move.Move;
 
 /**
  *
@@ -14,7 +18,7 @@ import ultimatetictactoe.bll.game.GameManager;
 public class Model {
 
     private static Model instance;
-    private GameManager gamemanager;
+    private GameManager gamemanager = new GameManager(new GameState(new GameField()));
 
     public static Model getInstance() {
         if (instance == null) {
@@ -23,4 +27,10 @@ public class Model {
         return instance;
     }
 
+    public boolean playMove(int x, int y)
+    {
+        IMove move = new Move(x, y);
+        return gamemanager.UpdateGame(move);
+    }
+    
 }

@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import ultimatetictactoe.gui.model.Model;
 
@@ -22,7 +23,9 @@ public class MainWindowController implements Initializable {
 
     private final Model model = Model.getInstance();
     @FXML
-    private GridPane gridPaniMain;
+    private GridPane gridPaneMain;
+    @FXML
+    private Label lblTurn;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -36,13 +39,21 @@ public class MainWindowController implements Initializable {
         int macroId = Integer.parseInt(srcButton.getParent().getId());
         System.out.println(buttonId);
         System.out.println(macroId);
+        
+        int x = getX(buttonId);
+        int y = getY(buttonId);
+        System.out.println(x + "; " + y);
+        //model.playMove(x, y); 
     }
     
+    /**
+     * Add an id to the grid panes and buttons
+     */
     private void setUpIds()
     {
         int btnId = 0;
         int grdId = 0;
-        for (Object o : gridPaniMain.getChildren())
+        for (Object o : gridPaneMain.getChildren())
         {
             if (GridPane.class.isInstance(o))
             {
@@ -60,5 +71,15 @@ public class MainWindowController implements Initializable {
                 grdId++;
             }
         }
+    }
+
+    private int getX(int buttonId)
+    {
+        return buttonId/9;
+    }
+
+    private int getY(int buttonId)
+    {
+        return buttonId%9;
     }
 }

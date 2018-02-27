@@ -24,6 +24,7 @@ public class GameState implements IGameState {
 
     public GameState(IField field) {
         this.field = field;
+        field.clearBoard();
     }
 
     @Override

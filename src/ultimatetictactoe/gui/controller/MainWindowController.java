@@ -20,9 +20,10 @@ import ultimatetictactoe.gui.model.Model;
  */
 public class MainWindowController implements Initializable {
 
-    private final Model model = Model.getInstance();
     @FXML
     private GridPane gridPaneMain;
+    
+    private final Model model = Model.getInstance();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

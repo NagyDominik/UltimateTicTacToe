@@ -22,8 +22,8 @@ public class MainWindowController implements Initializable {
 
     private final Model model = Model.getInstance();
     @FXML
-    private GridPane gridPaniMain;
-    
+    private GridPane gridPaneMain;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         setUpIds();
@@ -37,21 +37,17 @@ public class MainWindowController implements Initializable {
         System.out.println(buttonId);
         System.out.println(macroId);
     }
-    
-    private void setUpIds()
-    {
+
+    private void setUpIds() {
         int btnId = 0;
         int grdId = 0;
-        for (Object o : gridPaniMain.getChildren())
-        {
-            if (GridPane.class.isInstance(o))
-            {
+        for (Object o : gridPaneMain.getChildren()) {
+            if (GridPane.class.isInstance(o)) {
                 GridPane pane = (GridPane) o;
                 pane.setId(Integer.toString(grdId));
-                for (Object o2 : pane.getChildren())
-                {
-                    if (Button.class.isInstance(o2))
-                    {
+                
+                for (Object o2 : pane.getChildren()) {
+                    if (Button.class.isInstance(o2)) {
                         Button b = (Button) o2;
                         b.setId(Integer.toString(btnId));
                         btnId++;
@@ -61,4 +57,5 @@ public class MainWindowController implements Initializable {
             }
         }
     }
+    
 }

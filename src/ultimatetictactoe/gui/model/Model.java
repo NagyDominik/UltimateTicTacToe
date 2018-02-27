@@ -16,7 +16,7 @@ public class Model {
     private static Model instance;
     private GameManager gamemanager;
 
-    public Model getInstance() {
+    public static Model getInstance() {
         if (instance == null) {
             instance = new Model();
         }

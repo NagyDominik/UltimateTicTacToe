@@ -7,10 +7,12 @@ package ultimatetictactoe.gui.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -58,6 +60,8 @@ public class MainWindowController implements Initializable {
 //        {
 //            throw new Exception("Unable to play move!");
 //        }
+
+        disableInactiveButtons(newActiveMacroBoard);
     }
     
     /**
@@ -93,7 +97,32 @@ public class MainWindowController implements Initializable {
             }
             gridId++;
         }
-     
+    }
+    
+    private void disableInactiveButtons(int id)
+    {
+        String idString = Integer.toString(id);
+        gridPaneMain.getChildren().forEach((t) ->
+        {
+            GridPane p = (GridPane) t;
+            if (!p.getId().equals(idString))
+            {
+               p.getChildren().forEach((r) ->
+               {
+                   Button b = (Button) r;
+                   b.setDisable(true);
+               });
+            }
+            else
+            {           
+                p.getChildren().forEach((r) ->
+               {
+                   Button b = (Button) r;
+                   b.setDisable(false);
+               });
+
+            }
+        });
     }
 
     @FXML

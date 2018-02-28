@@ -15,7 +15,6 @@ import ultimatetictactoe.bll.move.IMove;
  * @author mjl
  */
 public class GameManager {
-
     /**
      * Three different game modes.
      */
@@ -133,6 +132,15 @@ public class GameManager {
         //TODO: Implement a bot vs bot Update.
         throw new UnsupportedOperationException("Not supported yet.");
     }
+    
+    public void setNewActiveMicroboard(int id)
+    {
+        int x = getMacroX(id);
+        int y = getMacroY(id);
+        String newActiveBoard[][] = new String[3][3];
+        newActiveBoard[x][y] = IField.AVAILABLE_FIELD;
+        currentState.getField().setMacroboard(newActiveBoard);
+    }
 
     private Boolean VerifyMoveLegality(IMove move) {
         //Test if the move is legal   
@@ -155,6 +163,49 @@ public class GameManager {
 
     private void UpdateMacroboard(IMove move) {
         currentState.getField().getMacroboard()[1][1] = "X";
+    }
+    
+    
+    private int getMacroX(int id)
+    {
+        switch (id)
+        {
+            case 0:
+            case 1:
+            case 2:
+                return 0;
+            case 3:
+            case 4:
+            case 5:
+                return 1;
+            case 6:
+            case 7:
+            case 8:
+                return 2;
+            default:
+                return -1;
+        }
+    }
+
+    private int getMacroY(int id)
+    {
+        switch (id)
+        {
+            case 0:
+            case 3:
+            case 6:
+                return 0;
+            case 1:
+            case 4:
+            case 7:
+                return 1;
+            case 2:
+            case 5:
+            case 8:
+                return 2;
+            default:
+                return -1;
+        }
     }
     
 }

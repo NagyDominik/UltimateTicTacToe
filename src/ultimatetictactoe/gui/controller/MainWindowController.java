@@ -33,6 +33,8 @@ public class MainWindowController implements Initializable {
     private Label lblTurn;
 
     private final Model model = Model.getInstance();
+    
+    private int[][] board = new int[9][9];
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -48,12 +50,17 @@ public class MainWindowController implements Initializable {
         int x = getX(buttonId);
         int y = getY(buttonId);
 
-        String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId;
-        System.out.println(result);
+        /*String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId;
+        System.out.println(result);*/
         
         setButtonXO(srcButton);
         model.UpdateGame(new Move(x, y));
-
+        
+        int newActiveMacroBoard = board[x][y];
+        
+        String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId + "\nNew micro board: " + newActiveMacroBoard;
+        System.out.println(result);
+        model.setNewMicroboard(newActiveMacroBoard);
 //        if(!model.playMove(x, y))
 //        {
 //            throw new Exception("Unable to play move!");
@@ -65,8 +72,11 @@ public class MainWindowController implements Initializable {
      */
     private void setUpIds() {
         int gridId = 0;
-        for (Object o : gridPaneMain.getChildren()) {
-            if (GridPane.class.isInstance(o)) {
+        int countId = 0;
+        for (Object o : gridPaneMain.getChildren())
+        {
+            if (GridPane.class.isInstance(o))
+            {
                 GridPane pane = (GridPane) o;
                 pane.setId(Integer.toString(gridId));
 
@@ -79,6 +89,12 @@ public class MainWindowController implements Initializable {
                         int btnCol = GridPane.getColumnIndex(b);
                         int btnRow = GridPane.getRowIndex(b);
                         b.setId(Integer.toString(col * 3 + row * 27 + btnCol + btnRow * 9));
+                        int id = (col*3 + row*27 + btnCol + btnRow*9);
+                        b.setId(Integer.toString(id));
+                        int x = getX(id);
+                        int y = getY(id);
+                        board[x][y] = countId%9;
+                        countId++;
                     }
                 }
             }

@@ -27,9 +27,16 @@ public class Model {
         return instance;
     }
 
-    public boolean playMove(int x, int y)
-    {
+    public boolean playMove(int x, int y) {
         IMove move = new Move(x, y);
+        return gamemanager.UpdateGame(move);
+    }
+
+    public int getCurrentPlayer() {
+        return gamemanager.getCurrentPlayer();
+    }
+    
+    public Boolean UpdateGame(IMove move) {
         return gamemanager.UpdateGame(move);
     }
     

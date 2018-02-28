@@ -1,6 +1,7 @@
 package ultimatetictactoe.bll.game;
 
 import ultimatetictactoe.bll.bot.IBot;
+import ultimatetictactoe.bll.field.IField;
 import ultimatetictactoe.bll.move.IMove;
 
 /**
@@ -72,6 +73,10 @@ public class GameManager {
         this.bot2 = bot2;
     }
 
+    public int getCurrentPlayer() {
+        return currentPlayer;
+    }
+    
     /**
      * User input driven Update
      *
@@ -134,10 +139,14 @@ public class GameManager {
         //NOTE: should also check whether the move is placed on an occupied spot.
         System.out.println("Checking move validity against macroboard available field");
         System.out.println("Not currently checking move validity actual board");
-        if (!currentState.getField().isEmpty()) { //Can only place mark on an empty field.
-            return false;
+        Boolean legal = true;
+        if (currentState.getField().getBoard()[move.getX()][move.getY()] != IField.EMPTY_FIELD) {
+            legal = false;
         }
-        return currentState.getField().isInActiveMicroboard(move.getX(), move.getY());
+        if (!currentState.getField().isInActiveMicroboard(move.getX(), move.getY())) {
+            legal = false;
+        }
+        return legal;
     }
 
     private void UpdateBoard(IMove move) {

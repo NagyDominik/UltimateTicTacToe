@@ -28,7 +28,7 @@ public class GameField implements IField {
         }
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                macroBoard[j][i] = IField.EMPTY_FIELD;
+                macroBoard[j][i] = IField.AVAILABLE_FIELD;
             }
         }
     }

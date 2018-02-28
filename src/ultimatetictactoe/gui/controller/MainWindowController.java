@@ -7,10 +7,12 @@ package ultimatetictactoe.gui.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -33,7 +35,7 @@ public class MainWindowController implements Initializable {
     private Label lblTurn;
 
     private final Model model = Model.getInstance();
-    
+
     private int[][] board = new int[9][9];
 
     @Override
@@ -52,12 +54,11 @@ public class MainWindowController implements Initializable {
 
         /*String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId;
         System.out.println(result);*/
-        
         setButtonXO(srcButton);
         model.UpdateGame(new Move(x, y));
-        
+
         int newActiveMacroBoard = board[x][y];
-        
+
         String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId + "\nNew micro board: " + newActiveMacroBoard;
         System.out.println(result);
         model.setNewMicroboard(newActiveMacroBoard);
@@ -65,6 +66,8 @@ public class MainWindowController implements Initializable {
 //        {
 //            throw new Exception("Unable to play move!");
 //        }
+
+        disableInactiveButtons(newActiveMacroBoard);
     }
 
     /**
@@ -73,10 +76,8 @@ public class MainWindowController implements Initializable {
     private void setUpIds() {
         int gridId = 0;
         int countId = 0;
-        for (Object o : gridPaneMain.getChildren())
-        {
-            if (GridPane.class.isInstance(o))
-            {
+        for (Object o : gridPaneMain.getChildren()) {
+            if (GridPane.class.isInstance(o)) {
                 GridPane pane = (GridPane) o;
                 pane.setId(Integer.toString(gridId));
 
@@ -89,18 +90,39 @@ public class MainWindowController implements Initializable {
                         int btnCol = GridPane.getColumnIndex(b);
                         int btnRow = GridPane.getRowIndex(b);
                         b.setId(Integer.toString(col * 3 + row * 27 + btnCol + btnRow * 9));
-                        int id = (col*3 + row*27 + btnCol + btnRow*9);
+                        int id = (col * 3 + row * 27 + btnCol + btnRow * 9);
                         b.setId(Integer.toString(id));
                         int x = getX(id);
                         int y = getY(id);
-                        board[x][y] = countId%9;
+                        board[x][y] = countId % 9;
                         countId++;
                     }
                 }
             }
             gridId++;
         }
+    }
 
+    private void disableInactiveButtons(int id) {
+        String idString = Integer.toString(id);
+        gridPaneMain.getChildren().forEach((t)
+                -> {
+            GridPane p = (GridPane) t;
+            if (!p.getId().equals(idString)) {
+                p.getChildren().forEach((r)
+                        -> {
+                    Button b = (Button) r;
+                    b.setDisable(true);
+                });
+            } else {
+                p.getChildren().forEach((r)
+                        -> {
+                    Button b = (Button) r;
+                    b.setDisable(false);
+                });
+
+            }
+        });
     }
 
     @FXML
@@ -134,7 +156,7 @@ public class MainWindowController implements Initializable {
     private int getY(int id) {
         return id % 9;
     }
-    
+
     private void setButtonXO(Button button) {
         if (model.getCurrentPlayer() == 0) {
             button.setText("X");

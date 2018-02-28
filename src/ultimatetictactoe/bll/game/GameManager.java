@@ -15,6 +15,7 @@ import ultimatetictactoe.bll.move.IMove;
  * @author mjl
  */
 public class GameManager {
+
     /**
      * Three different game modes.
      */
@@ -75,7 +76,7 @@ public class GameManager {
     public int getCurrentPlayer() {
         return currentPlayer;
     }
-    
+
     /**
      * User input driven Update
      *
@@ -87,13 +88,13 @@ public class GameManager {
         if (!VerifyMoveLegality(move)) {
             return false;
         }
-        
+
         int x = move.getX();
         int y = move.getY();
-       
+
         String[][] newMacro = new String[3][3];
         //newMacro[][] = 
-        
+
         //Update the currentState
         UpdateBoard(move);
         UpdateMacroboard(move);
@@ -114,8 +115,7 @@ public class GameManager {
         assert (mode != GameMode.HumanVsHuman);
 
         //Check if player is bot, if so, get bot input and update the state based on that.
-        if(mode == GameMode.HumanVsComputer && currentPlayer == 1)
-        {
+        if (mode == GameMode.HumanVsComputer && currentPlayer == 1) {
             //Check bot is not equal to null, and throw an exception if it is.
             assert (bot != null);
 
@@ -132,9 +132,8 @@ public class GameManager {
         //TODO: Implement a bot vs bot Update.
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
-    public void setNewActiveMicroboard(int id)
-    {
+
+    public void setNewActiveMicroboard(int id) {
         int x = getMacroX(id);
         int y = getMacroY(id);
         String newActiveBoard[][] = new String[3][3];
@@ -164,12 +163,9 @@ public class GameManager {
     private void UpdateMacroboard(IMove move) {
         currentState.getField().getMacroboard()[1][1] = "X";
     }
-    
-    
-    private int getMacroX(int id)
-    {
-        switch (id)
-        {
+
+    private int getMacroX(int id) {
+        switch (id) {
             case 0:
             case 1:
             case 2:
@@ -187,10 +183,8 @@ public class GameManager {
         }
     }
 
-    private int getMacroY(int id)
-    {
-        switch (id)
-        {
+    private int getMacroY(int id) {
+        switch (id) {
             case 0:
             case 3:
             case 6:
@@ -207,5 +201,5 @@ public class GameManager {
                 return -1;
         }
     }
-    
+
 }

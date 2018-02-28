@@ -19,7 +19,8 @@ public class Model {
 
     private static Model instance;
     private GameManager gamemanager = new GameManager(new GameState(new GameField()));
-
+    private int macroboardId;
+    
     public static Model getInstance() {
         if (instance == null) {
             instance = new Model();
@@ -31,6 +32,11 @@ public class Model {
     {
         IMove move = new Move(x, y);
         return gamemanager.UpdateGame(move);
+    }
+
+    public void setNewMicroboard(int newActiveMacroBoard)
+    {
+        this.macroboardId = newActiveMacroBoard;
     }
     
 }

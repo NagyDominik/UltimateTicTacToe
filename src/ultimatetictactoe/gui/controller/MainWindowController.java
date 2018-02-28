@@ -53,7 +53,7 @@ public class MainWindowController implements Initializable {
         
         String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId + "\nNew micro board: " + newActiveMacroBoard;
         System.out.println(result);
-       
+        model.setNewMicroboard(newActiveMacroBoard);
 //        if(!model.playMove(x, y))
 //        {
 //            throw new Exception("Unable to play move!");

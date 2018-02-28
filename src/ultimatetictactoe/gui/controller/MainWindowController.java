@@ -160,9 +160,11 @@ public class MainWindowController implements Initializable {
     private void setButtonXO(Button button) {
         if (model.getCurrentPlayer() == 0) {
             button.setText("X");
+            button.getStyleClass().add("blue");
         }
         if (model.getCurrentPlayer() == 1) {
-            button.setText("0");
+            button.setText("O");
+            button.getStyleClass().add("red");
         }
     }
 }

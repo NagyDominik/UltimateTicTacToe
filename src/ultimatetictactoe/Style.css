@@ -8,4 +8,15 @@
 
 .button {
     -fx-background-color: lightgray;
+    -fx-font-size: 25;
+}
+
+.blue
+{
+    -fx-text-fill: #0000ff;
+}
+
+.red
+{
+    -fx-text-fill: #ff0000;
 }

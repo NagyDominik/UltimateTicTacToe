@@ -9,6 +9,8 @@
 .button {
     -fx-background-color: lightgray;
     -fx-font-size: 25;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
 }
 
 .blue

@@ -38,47 +38,47 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -97,47 +97,47 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -159,47 +159,47 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -221,47 +221,47 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -283,47 +283,47 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0"> 
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0"> 
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -345,47 +345,47 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -407,47 +407,47 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -469,47 +469,47 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -531,47 +531,47 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css"  GridPane.columnIndex="2" GridPane.rowIndex="0">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="0">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="0" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <JFXButton focusTraversable="false" onAction="#btnClicked" prefHeight="150.0" prefWidth="150.0" stylesheets="@../../Style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>

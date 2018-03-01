@@ -158,10 +158,12 @@ public class GameManager {
 
     private void UpdateBoard(IMove move) {
         currentState.getField().getBoard()[move.getX()][move.getY()] = "X";
+        System.out.println(checkMicroboardWin());
     }
 
     private void UpdateMacroboard(IMove move) {
         currentState.getField().getMacroboard()[1][1] = "X";
+        System.out.println(checkMicroboardWin());
     }
 
     private int getMacroX(int id) {
@@ -202,4 +204,27 @@ public class GameManager {
         }
     }
 
+    public Boolean checkMicroboardWin() {
+        Boolean checkwin = false;
+        String[][] board = currentState.getField().getBoard();
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 3; k++) {
+                    if (board[(j * i + k)][i] != IField.EMPTY_FIELD && board[j * i + k][i + 1] == board[j * i + k][i] && board[j * i + k][i + 2] == board[j * i + k][i]) {
+                        checkwin = true;
+                    }
+                    if (board[i][j * i + k] != IField.EMPTY_FIELD && board[i + 1][j * i + k] == board[i][j * i + k] && board[i + 2][j * i + k] == board[i][j * i + k]) {
+                        checkwin = true;
+                    }
+                    /*if (board[1][1] != IField.EMPTY_FIELD && board[0][0] == board[1][1] && board[2][2] == board[1][1]) {
+                        checkwin = true;
+                    }
+                    if (board[1][1] != IField.EMPTY_FIELD && board[0][2] == board[1][1] && board[2][0] == board[1][1]) {
+                        checkwin = true;
+                    }*/
+                }
+            }
+        }
+        return checkwin;
+    }
 }

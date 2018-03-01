@@ -5,8 +5,10 @@
  */
 package ultimatetictactoe.bll.field;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 import ultimatetictactoe.bll.move.IMove;
 
 /**
@@ -18,6 +20,10 @@ public class GameField implements IField {
     private String[][] board = new String[9][9];
     private String[][] macroBoard = new String[3][3];
     private List<IMove> moves = new ArrayList();
+    
+    public void initialize(URL url, ResourceBundle rb) {
+        clearBoard();
+    }
     
     @Override
     public void clearBoard() {
@@ -100,4 +106,5 @@ public class GameField implements IField {
     public void updateBoard(int x, int y) {
         board[x][y] = "X";
     }
+    
 }

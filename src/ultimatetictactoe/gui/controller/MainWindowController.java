@@ -118,7 +118,10 @@ public class MainWindowController implements Initializable {
                 p.getChildren().forEach((r)
                         -> {
                     Button b = (Button) r;
-                    b.setDisable(false);
+                    if (!b.getId().equals("used"))
+                    {
+                        b.setDisable(false);   
+                    }
                 });
 
             }
@@ -161,10 +164,14 @@ public class MainWindowController implements Initializable {
         if (model.getCurrentPlayer() == 0) {
             button.setText("X");
             button.getStyleClass().add("blue");
+            button.setId("used");
+            button.setDisable(true);
         }
         if (model.getCurrentPlayer() == 1) {
             button.setText("O");
             button.getStyleClass().add("red");
+            button.setId("used");
+            button.setDisable(true);
         }
     }
 }

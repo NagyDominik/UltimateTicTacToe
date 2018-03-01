@@ -92,9 +92,6 @@ public class GameManager {
         int x = move.getX();
         int y = move.getY();
 
-        String[][] newMacro = new String[3][3];
-        //newMacro[][] = 
-
         //Update the currentState
         UpdateBoard(move);
         UpdateMacroboard(move);
@@ -202,4 +199,46 @@ public class GameManager {
         }
     }
 
+    
+    private Boolean checkMacroBoardWin(String[][] macroBoard, int col, int row, String playerSymbol)
+    {
+        for(int i = 0; i < 3; i++){
+            if(macroBoard[col][i] != playerSymbol)
+                break;
+            if(i == 2){
+                return true;
+            }
+        }
+        
+        for(int i = 0; i < 3; i++){
+            if(macroBoard[i][row] != playerSymbol)
+                break;
+            if(i == 2){
+                return true;
+            }
+        }
+        
+        if(col == row){
+            //we're on a diagonal
+            for(int i = 0; i < 3; i++){
+                if(macroBoard[i][i] != playerSymbol)
+                    break;
+                if(i == 2){
+                    return true;
+                }
+            }
+        }
+        
+        if(col + row == 2){
+            for(int i = 0; i < 3; i++){
+                if(macroBoard[i][(2)-i] != playerSymbol)
+                    break;
+                if(i == 2){
+                    return true;
+                }
+            }
+        }
+        
+        return false;
+    }
 }

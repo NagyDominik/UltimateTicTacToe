@@ -168,7 +168,7 @@ public class GameManager {
     }
 
     private void UpdateMacroboard(IMove move) {
-        currentState.getField().getMacroboard()[1][1] = "X";
+        currentState.getField().getMacroboard()[1][1] = String.valueOf(currentPlayer);
         System.out.println(checkMicroboardWin());
     }
 
@@ -219,16 +219,20 @@ public class GameManager {
                 int jx = j * 3;
                 for (int k = 0; k < 3; k++) {
                     if (board[ix + k][jx] != IField.EMPTY_FIELD && board[ix + k][jx + 1] == board[ix + k][jx] && board[ix + k][jx + 2] == board[ix + k][jx]) {
+                        setMacroWin(i, j);
                         checkwin = true;
                     }
                     if (board[jx][ix + k] != IField.EMPTY_FIELD && board[jx + 1][ix + k] == board[jx][ix + k] && board[jx + 2][ix + k] == board[jx][ix + k]) {
+                        setMacroWin(i, j);
                         checkwin = true;
                     }
                 }
                 if (board[jx][jx] != IField.EMPTY_FIELD && board[jx][jx] == board[jx + 1][jx + 1] && board[jx + 2][jx + 2] == board[jx + 1][jx + 1]) {
+                    setMacroWin(i, j);
                     checkwin = true;
                 }
                 if (board[jx + 2][jx] != IField.EMPTY_FIELD && board[jx + 1][jx + 1] == board[jx + 2][jx] && board[jx][jx + 2] == board[jx + 1][jx + 1]) {
+                    setMacroWin(i, j);
                     checkwin = true;
                 }
             }
@@ -236,8 +240,14 @@ public class GameManager {
         return checkwin;
     }
 
-    //TODO: make this not ugly as fuck
-    private Boolean checkMacroBoardWin() {
+        private void setMacroWin(int col, int row) {
+            String[][] uboard = currentState.getField().getMacroboard();
+            uboard[row][col] = String.valueOf(this.currentPlayer);
+            currentState.getField().setMacroboard(uboard);
+        }
+
+        //TODO: make this not ugly as fuck
+        private Boolean checkMacroBoardWin() {
         String[][] macroBoard= currentState.getField().getMacroboard();
         //Check first row
         if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[0][1]) && macroBoard[0][1].equals(macroBoard[0][2]))

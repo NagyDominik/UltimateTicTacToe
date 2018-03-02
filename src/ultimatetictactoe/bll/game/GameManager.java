@@ -218,19 +218,21 @@ public class GameManager {
         String[][] board = currentState.getField().getBoard();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
+                int ix = i * 3;
+                int jx = j * 3;
                 for (int k = 0; k < 3; k++) {
-                    if (board[(j * i + k)][i] != IField.EMPTY_FIELD && board[j * i + k][i + 1] == board[j * i + k][i] && board[j * i + k][i + 2] == board[j * i + k][i]) {
+                    if (board[ix + k][jx] != IField.EMPTY_FIELD && board[ix + k][jx + 1] == board[ix + k][jx] && board[ix + k][jx + 2] == board[ix + k][jx]) {
                         checkwin = true;
                     }
-                    if (board[i][j * i + k] != IField.EMPTY_FIELD && board[i + 1][j * i + k] == board[i][j * i + k] && board[i + 2][j * i + k] == board[i][j * i + k]) {
+                    if (board[jx][ix + k] != IField.EMPTY_FIELD && board[jx + 1][ix + k] == board[jx][ix + k] && board[jx + 2][ix + k] == board[jx][ix + k]) {
                         checkwin = true;
                     }
-                    /*if (board[1][1] != IField.EMPTY_FIELD && board[0][0] == board[1][1] && board[2][2] == board[1][1]) {
-                        checkwin = true;
-                    }
-                    if (board[1][1] != IField.EMPTY_FIELD && board[0][2] == board[1][1] && board[2][0] == board[1][1]) {
-                        checkwin = true;
-                    }*/
+                }
+                if (board[jx][jx] != IField.EMPTY_FIELD && board[jx][jx] == board[jx + 1][jx + 1] && board[jx + 2][jx + 2] == board[jx + 1][jx + 1]) {
+                    checkwin = true;
+                }
+                if (board[jx + 2][jx] != IField.EMPTY_FIELD && board[jx + 1][jx + 1] == board[jx + 2][jx] && board[jx][jx + 2] == board[jx + 1][jx + 1]) {
+                    checkwin = true;
                 }
             }
         }
@@ -246,7 +248,6 @@ public class GameManager {
                 return true;
             }
         }
-
         for (int i = 0; i < 3; i++) {
             if (macroBoard[i][row] != playerSymbol) {
                 break;
@@ -255,7 +256,6 @@ public class GameManager {
                 return true;
             }
         }
-
         if (col == row) {
             //we're on a diagonal
             for (int i = 0; i < 3; i++) {
@@ -267,7 +267,6 @@ public class GameManager {
                 }
             }
         }
-
         if (col + row == 2) {
             for (int i = 0; i < 3; i++) {
                 if (macroBoard[i][(2) - i] != playerSymbol) {
@@ -278,7 +277,6 @@ public class GameManager {
                 }
             }
         }
-
         return false;
     }
 }

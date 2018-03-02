@@ -89,9 +89,6 @@ public class GameManager {
             return false;
         }
 
-        int x = move.getX();
-        int y = move.getY();
-
         //Update the currentState
         UpdateBoard(move);
         UpdateMacroboard(move);
@@ -102,7 +99,7 @@ public class GameManager {
             //newMacroBoard[]
             //currentState.getField().setMacroboard();
             System.out.println("MicroBoardWin");
-            if (checkMacroBoardWin(currentState.getField().getMacroboard(), x, y, Integer.toString(currentPlayer)))
+            if (checkMacroBoardWin())
             {
                 System.out.println("MacroBoardWin");
             }
@@ -239,44 +236,51 @@ public class GameManager {
         return checkwin;
     }
 
-    private Boolean checkMacroBoardWin(String[][] macroBoard, int col, int row, String playerSymbol) {
-        for (int i = 0; i < 3; i++) {
-            if (macroBoard[col][i] != playerSymbol) {
-                break;
-            }
-            if (i == 2) {
-                return true;
-            }
+    //TODO: make this not ugly as fuck
+    private Boolean checkMacroBoardWin() {
+        String[][] macroBoard= currentState.getField().getMacroboard();
+        //Check first row
+        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[0][1]) && macroBoard[0][1].equals(macroBoard[0][2]))
+        {
+            return true;
         }
-        for (int i = 0; i < 3; i++) {
-            if (macroBoard[i][row] != playerSymbol) {
-                break;
-            }
-            if (i == 2) {
-                return true;
-            }
+        //Check second row
+        if (!macroBoard[1][0].equals("-1") && macroBoard[1][0].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[1][2]))
+        {
+            return true;
         }
-        if (col == row) {
-            //we're on a diagonal
-            for (int i = 0; i < 3; i++) {
-                if (macroBoard[i][i] != playerSymbol) {
-                    break;
-                }
-                if (i == 2) {
-                    return true;
-                }
-            }
+        //Check third row
+        if (!macroBoard[2][0].equals("-1") && macroBoard[2][0].equals(macroBoard[2][1]) && macroBoard[2][1].equals(macroBoard[2][2]))
+        {
+            return true;
         }
-        if (col + row == 2) {
-            for (int i = 0; i < 3; i++) {
-                if (macroBoard[i][(2) - i] != playerSymbol) {
-                    break;
-                }
-                if (i == 2) {
-                    return true;
-                }
-            }
+        
+        //Check first column
+        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[1][0]) && macroBoard[1][0].equals(macroBoard[2][0]))
+        {
+            return true;
         }
+        //Check second column
+        if (!macroBoard[0][1].equals("-1") && macroBoard[0][1].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[2][1]))
+        {
+            return true;
+        }
+        //Check third row
+        if (!macroBoard[0][2].equals("-1") && macroBoard[0][2].equals(macroBoard[1][2]) && macroBoard[1][2].equals(macroBoard[2][2]))
+        {
+            return true;
+        }
+        
+        //Check diagonals
+        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[2][2]))
+        {
+            return true;
+        }   
+        if (!macroBoard[0][2].equals("-1") && macroBoard[0][2].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[0][2]))
+        {
+            return true;
+        }
+        
         return false;
     }
 }

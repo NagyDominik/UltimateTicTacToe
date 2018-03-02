@@ -8,14 +8,14 @@
 
 <AnchorPane id="AnchorPane" prefHeight="732.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ultimatetictactoe.gui.controller.GameModesController">
    <children>
-      <ImageView fitHeight="769.0" fitWidth="544.0" layoutY="-37.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="768.0" fitWidth="556.0" layoutY="-16.0" AnchorPane.bottomAnchor="-11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-12.0" AnchorPane.topAnchor="-16.0">
          <image>
             <Image url="@../../pics/bencsadae-02.png" />
          </image>
       </ImageView>
-      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="137.0" layoutY="269.0" mnemonicParsing="false" onAction="#humanVsHuman" prefHeight="52.0" prefWidth="270.0" text="Button" textOverrun="CLIP" AnchorPane.bottomAnchor="448.0" AnchorPane.topAnchor="269.0" />
-      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="137.0" layoutY="445.0" mnemonicParsing="false" onAction="#computerVsComputer" prefHeight="52.0" prefWidth="270.0" textOverrun="CLIP" AnchorPane.bottomAnchor="272.0" AnchorPane.topAnchor="445.0" />
-      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="137.0" layoutY="359.0" mnemonicParsing="false" onAction="#humanVsComputer" prefHeight="52.0" prefWidth="270.0" textOverrun="CLIP" AnchorPane.bottomAnchor="358.0" AnchorPane.topAnchor="357.0" />
+      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="140.0" layoutY="254.0" mnemonicParsing="false" onAction="#humanVsHuman" prefHeight="52.0" prefWidth="276.0" text="Button" textOverrun="CLIP" AnchorPane.bottomAnchor="436.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="139.0" AnchorPane.topAnchor="253.0" />
+      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="140.0" layoutY="427.0" mnemonicParsing="false" onAction="#computerVsComputer" prefHeight="52.0" prefWidth="276.0" textOverrun="CLIP" AnchorPane.bottomAnchor="262.0" AnchorPane.topAnchor="427.0" />
+      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="140.0" layoutY="341.0" mnemonicParsing="false" onAction="#humanVsComputer" prefHeight="59.0" prefWidth="276.0" textOverrun="CLIP" AnchorPane.bottomAnchor="347.0" AnchorPane.topAnchor="341.0" />
       <Label fx:id="label" layoutX="151.0" layoutY="48.0" />
    </children>
 </AnchorPane>

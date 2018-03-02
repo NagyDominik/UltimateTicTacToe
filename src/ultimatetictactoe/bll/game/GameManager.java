@@ -89,9 +89,6 @@ public class GameManager {
             return false;
         }
 
-        int x = move.getX();
-        int y = move.getY();
-
         //Update the currentState
         UpdateBoard(move);
         UpdateMacroboard(move);
@@ -102,7 +99,7 @@ public class GameManager {
             //newMacroBoard[]
             //currentState.getField().setMacroboard();
             System.out.println("MicroBoardWin");
-            if (checkMacroBoardWin(currentState.getField().getMacroboard(), x, y, Integer.toString(currentPlayer)))
+            if (checkMacroBoardWin())
             {
                 System.out.println("MacroBoardWin");
             }
@@ -171,7 +168,7 @@ public class GameManager {
     }
 
     private void UpdateMacroboard(IMove move) {
-        currentState.getField().getMacroboard()[1][1] = "X";
+        currentState.getField().getMacroboard()[1][1] = String.valueOf(currentPlayer);
         System.out.println(checkMicroboardWin());
     }
 
@@ -222,16 +219,20 @@ public class GameManager {
                 int jx = j * 3;
                 for (int k = 0; k < 3; k++) {
                     if (board[ix + k][jx] != IField.EMPTY_FIELD && board[ix + k][jx + 1] == board[ix + k][jx] && board[ix + k][jx + 2] == board[ix + k][jx]) {
+                        setMacroWin(i, j);
                         checkwin = true;
                     }
                     if (board[jx][ix + k] != IField.EMPTY_FIELD && board[jx + 1][ix + k] == board[jx][ix + k] && board[jx + 2][ix + k] == board[jx][ix + k]) {
+                        setMacroWin(i, j);
                         checkwin = true;
                     }
                 }
                 if (board[jx][jx] != IField.EMPTY_FIELD && board[jx][jx] == board[jx + 1][jx + 1] && board[jx + 2][jx + 2] == board[jx + 1][jx + 1]) {
+                    setMacroWin(i, j);
                     checkwin = true;
                 }
                 if (board[jx + 2][jx] != IField.EMPTY_FIELD && board[jx + 1][jx + 1] == board[jx + 2][jx] && board[jx][jx + 2] == board[jx + 1][jx + 1]) {
+                    setMacroWin(i, j);
                     checkwin = true;
                 }
             }
@@ -239,44 +240,57 @@ public class GameManager {
         return checkwin;
     }
 
-    private Boolean checkMacroBoardWin(String[][] macroBoard, int col, int row, String playerSymbol) {
-        for (int i = 0; i < 3; i++) {
-            if (macroBoard[col][i] != playerSymbol) {
-                break;
-            }
-            if (i == 2) {
-                return true;
-            }
+        private void setMacroWin(int col, int row) {
+            String[][] uboard = currentState.getField().getMacroboard();
+            uboard[row][col] = String.valueOf(this.currentPlayer);
+            currentState.getField().setMacroboard(uboard);
         }
-        for (int i = 0; i < 3; i++) {
-            if (macroBoard[i][row] != playerSymbol) {
-                break;
-            }
-            if (i == 2) {
-                return true;
-            }
+
+        //TODO: make this not ugly as fuck
+        private Boolean checkMacroBoardWin() {
+        String[][] macroBoard= currentState.getField().getMacroboard();
+        //Check first row
+        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[0][1]) && macroBoard[0][1].equals(macroBoard[0][2]))
+        {
+            return true;
         }
-        if (col == row) {
-            //we're on a diagonal
-            for (int i = 0; i < 3; i++) {
-                if (macroBoard[i][i] != playerSymbol) {
-                    break;
-                }
-                if (i == 2) {
-                    return true;
-                }
-            }
+        //Check second row
+        if (!macroBoard[1][0].equals("-1") && macroBoard[1][0].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[1][2]))
+        {
+            return true;
         }
-        if (col + row == 2) {
-            for (int i = 0; i < 3; i++) {
-                if (macroBoard[i][(2) - i] != playerSymbol) {
-                    break;
-                }
-                if (i == 2) {
-                    return true;
-                }
-            }
+        //Check third row
+        if (!macroBoard[2][0].equals("-1") && macroBoard[2][0].equals(macroBoard[2][1]) && macroBoard[2][1].equals(macroBoard[2][2]))
+        {
+            return true;
         }
+        
+        //Check first column
+        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[1][0]) && macroBoard[1][0].equals(macroBoard[2][0]))
+        {
+            return true;
+        }
+        //Check second column
+        if (!macroBoard[0][1].equals("-1") && macroBoard[0][1].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[2][1]))
+        {
+            return true;
+        }
+        //Check third row
+        if (!macroBoard[0][2].equals("-1") && macroBoard[0][2].equals(macroBoard[1][2]) && macroBoard[1][2].equals(macroBoard[2][2]))
+        {
+            return true;
+        }
+        
+        //Check diagonals
+        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[2][2]))
+        {
+            return true;
+        }   
+        if (!macroBoard[0][2].equals("-1") && macroBoard[0][2].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[0][2]))
+        {
+            return true;
+        }
+        
         return false;
     }
 }

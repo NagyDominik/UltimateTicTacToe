@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="629.0" style="-fx-background-color: #010125;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ultimatetictactoe.gui.controller.HelpWindowController">
+   <children>
+      <Label layoutX="111.0" layoutY="29.0" text="Explanation of the game modes:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Exo 2 Black" size="26.0" />
+         </font>
+      </Label>
+      <Hyperlink focusTraversable="false" layoutX="23.0" layoutY="340.0" onAction="#openInBrowser" text="https://mathwithbaddrawings.com/2013/06/16/ultimate-tic-tac-toe/">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Hyperlink>
+      <Label layoutX="23.0" layoutY="97.0" style="-fx-background-color: #16BA04;" text="Human vs Human : ">
+         <font>
+            <Font name="Exo 2 Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="121.0" text="in this mode you are able to play with your friends." textFill="WHITE">
+         <font>
+            <Font name="Exo 2 Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="156.0" prefHeight="24.0" prefWidth="173.0" style="-fx-background-color: #B500C4;" text="Human vs Computer:">
+         <font>
+            <Font name="Exo 2 Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="180.0" text=" in this mode you will play againts the computer." textFill="WHITE">
+         <font>
+            <Font name="Exo 2 Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="216.0" style="-fx-background-color: #1CB7B5;" text="Computer vs Computer:">
+         <font>
+            <Font name="Exo 2 Black" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="240.0" text=" in this mode you can observe how computer plays to against each other." textFill="WHITE">
+         <font>
+            <Font name="Exo 2 Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="312.0" prefHeight="20.0" prefWidth="348.0" text="You can find the rules of the game down below:" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

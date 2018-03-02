@@ -26,6 +26,9 @@ public class GameModesController implements Initializable {
 
     @FXML
     private Label label;
+    @FXML
+    private Label lbl;
+    FXMLLoader loader = new FXMLLoader();
 
     /**
      * Initializes the controller class.
@@ -38,7 +41,7 @@ public class GameModesController implements Initializable {
     @FXML
     private void humanVsHuman(ActionEvent event) throws Exception {
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/MainWindow.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/MainWindow.fxml"));
         Parent root = (Parent) loader.load();
         Stage stage = (Stage) label.getScene().getWindow();
         stage.setScene(new Scene(root));
@@ -53,5 +56,19 @@ public class GameModesController implements Initializable {
     @FXML
     private void computerVsComputer(ActionEvent event) {
     }
+   
+
+    @FXML
+    private void sajtHelp(ActionEvent event) throws IOException {
+        loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/HelpWindow.fxml"));
+        Parent root = (Parent) loader.load();
+        Stage stage = (Stage) lbl.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle("How to play?");
+        stage.setResizable(false);
+        stage.show();
+    }
+    
+
     
 }

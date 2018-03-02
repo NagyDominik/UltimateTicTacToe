@@ -95,7 +95,19 @@ public class GameManager {
         //Update the currentState
         UpdateBoard(move);
         UpdateMacroboard(move);
-
+        
+        if (checkMicroboardWin())
+        {
+            //String[][] newMacroBoard = new String[3][3];
+            //newMacroBoard[]
+            //currentState.getField().setMacroboard();
+            System.out.println("MicroBoardWin");
+            if (checkMacroBoardWin(currentState.getField().getMacroboard(), x, y, Integer.toString(currentPlayer)))
+            {
+                System.out.println("MacroBoardWin");
+            }
+        }
+        
         //Update currentPlayer
         currentPlayer = (currentPlayer + 1) % 2;
 

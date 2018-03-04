@@ -88,13 +88,11 @@ public class MainWindowController implements Initializable {
                         int btnRow = GridPane.getRowIndex(b);
                         b.setId(Integer.toString(col * 3 + row * 27 + btnCol + btnRow * 9));
                         int id = (col * 3 + row * 27 + btnCol + btnRow * 9);
-                        b.setId(Integer.toString(id));
-                        int x = getX(id);
-                        int y = getY(id);
-                        board[x][y] = countId % 9;
+                        board[getX(id)][getY(id)] = countId;
                         countId++;
                     }
                 }
+                countId = 0;
             }
             gridId++;
         }

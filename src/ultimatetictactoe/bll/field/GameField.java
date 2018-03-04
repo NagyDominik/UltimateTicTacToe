@@ -103,8 +103,8 @@ public class GameField implements IField {
         this.macroBoard = macroboard;
     }
 
-    public void updateBoard(int x, int y) {
-        board[x][y] = "X";
+    public void updateBoard(int x, int y, byte player) {
+        board[x][y] = player == 1 ? "O" : "X";
     }
     
 }

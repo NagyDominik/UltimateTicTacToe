@@ -1,6 +1,7 @@
 package ultimatetictactoe.bll.game;
 
 import ultimatetictactoe.bll.bot.IBot;
+import ultimatetictactoe.bll.field.GameField;
 import ultimatetictactoe.bll.field.IField;
 import ultimatetictactoe.bll.move.IMove;
 
@@ -163,7 +164,8 @@ public class GameManager {
     }
 
     private void UpdateBoard(IMove move) {
-        currentState.getField().getBoard()[move.getX()][move.getY()] = "X";
+        GameField field = (GameField) currentState.getField();
+        field.updateBoard(move.getX(), move.getY(), (byte)currentPlayer);
         System.out.println(checkMicroboardWin());
     }
 

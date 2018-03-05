@@ -49,20 +49,22 @@ public class MainWindowController implements Initializable {
         int x = getX(buttonId);
         int y = getY(buttonId);
 
-        /*String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId;
-        System.out.println(result);*/
         setButtonXO(srcButton);
-        model.UpdateGame(new Move(x, y));
 
         int newActiveMacroBoard = board[x][y];
 
         String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId + "\nNew micro board: " + newActiveMacroBoard;
         System.out.println(result);
         model.setNewMicroboard(newActiveMacroBoard);
-//        if(!model.playMove(x, y))
-//        {
-//            throw new Exception("Unable to play move!");
-//        }
+        if(!model.playMove(x, y))
+        {
+            throw new Exception("Unable to play move!");
+        }
+        
+        if (model.playMove());
+        {
+            updateUI();
+        }
 
         disableInactiveButtons(newActiveMacroBoard);
     }
@@ -167,6 +169,26 @@ public class MainWindowController implements Initializable {
             button.getStyleClass().add("red");
             button.setId("used");
             button.setDisable(true);
+        }
+    }
+
+    private void updateUI()
+    {
+        for (Object o : gridPaneMain.getChildren())
+        {
+            GridPane g = (GridPane) o;
+            
+            for (Object o2 : g.getChildren())
+            {
+                Button b = (Button) o2;
+                
+                if (!b.getId().equals("used"))
+                {
+                    int kurvaanyad = model.getFieldState(getX(Integer.parseInt(b.getId())), getY(Integer.parseInt(b.getId())));
+                    System.out.println(kurvaanyad);
+                    
+                }
+            }
         }
     }
 }

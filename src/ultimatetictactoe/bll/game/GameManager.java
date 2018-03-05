@@ -96,9 +96,6 @@ public class GameManager {
         
         if (checkMicroboardWin())
         {
-            //String[][] newMacroBoard = new String[3][3];
-            //newMacroBoard[]
-            //currentState.getField().setMacroboard();
             System.out.println("MicroBoardWin");
             if (checkMacroBoardWin())
             {
@@ -108,7 +105,7 @@ public class GameManager {
         
         //Update currentPlayer
         currentPlayer = (currentPlayer + 1) % 2;
-
+        
         return true;
     }
 
@@ -295,4 +292,9 @@ public class GameManager {
         
         return false;
     }
+        
+        public int getFieldState(int x, int y)
+        {
+            return currentState.getField().getBoard()[x][y].equals("X") ? 0 : 1;                  
+        }
 }

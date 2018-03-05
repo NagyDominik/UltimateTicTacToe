@@ -16,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import ultimatetictactoe.gui.model.Model;
 
 /**
  * FXML Controller class
@@ -29,18 +30,20 @@ public class GameModesController implements Initializable {
     @FXML
     private Label lbl;
     FXMLLoader loader = new FXMLLoader();
+    
+    private Model model;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        model = Model.getInstance();
     }    
 
     @FXML
     private void humanVsHuman(ActionEvent event) throws Exception {
-        
+        model.setGameManagerHvH();
         loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/MainWindow.fxml"));
         Parent root = (Parent) loader.load();
         Stage stage = (Stage) label.getScene().getWindow();
@@ -50,7 +53,14 @@ public class GameModesController implements Initializable {
     }
 
     @FXML
-    private void humanVsComputer(ActionEvent event) {
+    private void humanVsComputer(ActionEvent event) throws IOException {
+        model.setGameManageHvB();
+        loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/MainWindow.fxml"));
+        Parent root = (Parent) loader.load();
+        Stage stage = (Stage) label.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML

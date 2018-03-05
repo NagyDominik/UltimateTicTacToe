@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ultimatetictactoe.be;
+package ultimatetictactoe.bll.bot;
 
+import java.util.List;
+import java.util.Random;
 import ultimatetictactoe.bll.bot.IBot;
 import ultimatetictactoe.bll.game.IGameState;
 import ultimatetictactoe.bll.move.IMove;
@@ -24,7 +26,13 @@ public class MCBot implements IBot
     @Override
     public IMove doMove(IGameState state)
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Random r = new Random();
+        List<IMove> validMoves = state.getField().getAvailableMoves();
+        return validMoves.get(r.nextInt(validMoves.size()));
     }
     
+    public String getBotName()
+    {
+        return "MCBot";
+    }
 }

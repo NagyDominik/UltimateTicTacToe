@@ -7,6 +7,9 @@ package ultimatetictactoe.gui.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -38,6 +41,7 @@ public class MainWindowController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         setUpIds();
+        winListener();
     }
 
     @FXML
@@ -113,12 +117,10 @@ public class MainWindowController implements Initializable {
                 p.getChildren().forEach((r)
                         -> {
                     Button b = (Button) r;
-                    if (!b.getId().equals("used"))
-                    {
-                        b.setDisable(false);   
+                    if (!b.getId().equals("used")) {
+                        b.setDisable(false);
                     }
                 });
-
             }
         });
     }
@@ -168,5 +170,24 @@ public class MainWindowController implements Initializable {
             button.setId("used");
             button.setDisable(true);
         }
+    }
+
+    private void winListener() {
+        ObservableList<Integer> wins = model.getMacroboardWins();
+        model.getMacroboardWins().addListener((ListChangeListener.Change<? extends Integer> c) -> {
+            wins.forEach((i) -> {
+                gridPaneMain.getChildren().forEach((t) -> {
+                    if (t.getId().equals(i.toString())) {
+                        GridPane p = (GridPane) t;
+                        p.getChildren().forEach((u) -> {
+                            Button butt = (Button) u;
+                            butt.setId("used");
+                            butt.setDisable(true);
+                        });
+                        p.setStyle("-fx-background-color: red");
+                    }
+                });
+            });
+        });
     }
 }

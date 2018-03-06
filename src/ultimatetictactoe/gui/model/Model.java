@@ -5,6 +5,7 @@
  */
 package ultimatetictactoe.gui.model;
 
+import javafx.collections.ObservableList;
 import ultimatetictactoe.bll.field.GameField;
 import ultimatetictactoe.bll.game.GameManager;
 import ultimatetictactoe.bll.game.GameState;
@@ -20,7 +21,7 @@ public class Model {
     private static Model instance;
     private GameManager gamemanager = new GameManager(new GameState(new GameField()));
     private int macroboardId;
-    
+
     public static Model getInstance() {
         if (instance == null) {
             instance = new Model();
@@ -36,14 +37,16 @@ public class Model {
     public int getCurrentPlayer() {
         return gamemanager.getCurrentPlayer();
     }
-    
+
     public Boolean UpdateGame(IMove move) {
         return gamemanager.UpdateGame(move);
     }
-    
-    public void setNewMicroboard(int newActiveMacroBoard)
-    {
+
+    public void setNewMicroboard(int newActiveMacroBoard) {
         this.macroboardId = newActiveMacroBoard;
     }
-    
+
+    public ObservableList<Integer> getMacroboardWins() {
+        return gamemanager.getMacroboardWins();
+    }
 }

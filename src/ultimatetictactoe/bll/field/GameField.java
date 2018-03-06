@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import ultimatetictactoe.bll.move.IMove;
+import ultimatetictactoe.bll.move.Move;
 
 /**
  *
@@ -41,6 +42,16 @@ public class GameField implements IField {
 
     @Override
     public List<IMove> getAvailableMoves() {
+        for (int i = 0; i < board.length; i++)
+        {
+            for (int j = 0; j < board.length; j++)
+            {
+                if (board[i][j].equals(IField.EMPTY_FIELD) && isInActiveMicroboard(i, j))
+                {
+                    moves.add(new Move(i, j));
+                }
+            }
+        }
         return moves;
     }
 

@@ -296,4 +296,9 @@ public class GameManager {
         checkMicroboardWin();
         return this.macroWins;
     }
+
+    public int getFieldState(int x, int y) {
+        return currentState.getField().getBoard()[x][y].equals("X") ? 0 : 1;
+    }
+
 }

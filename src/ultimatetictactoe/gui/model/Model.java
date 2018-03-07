@@ -5,8 +5,8 @@
  */
 package ultimatetictactoe.gui.model;
 
-import javafx.collections.ObservableList;
-
+import java.util.ArrayList;
+import java.util.List;
 import ultimatetictactoe.bll.bot.MCBot;
 import ultimatetictactoe.bll.field.GameField;
 import ultimatetictactoe.bll.game.GameManager;
@@ -60,8 +60,15 @@ public class Model {
         this.macroboardId = newActiveMacroBoard;
     }
 
-    public ObservableList<Integer> getMacroboardWins() {
-        return gamemanager.getMacroboardWins();
+    public List<String> getMacroboardWins() {
+        List<String> ids = new ArrayList();
+        String[][] macroboard = gamemanager.getMacroboardWins();
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                ids.add(macroboard[i][j]);
+            }
+        }
+        return ids;
     }
 
     public int getFieldState(int x, int y) {

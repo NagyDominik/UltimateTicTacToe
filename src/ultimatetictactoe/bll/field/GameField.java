@@ -21,11 +21,11 @@ public class GameField implements IField {
     private String[][] board = new String[9][9];
     private String[][] macroBoard = new String[3][3];
     private List<IMove> moves = new ArrayList();
-    
+
     public void initialize(URL url, ResourceBundle rb) {
         clearBoard();
     }
-    
+
     @Override
     public void clearBoard() {
         for (int i = 0; i < 9; i++) {
@@ -42,12 +42,9 @@ public class GameField implements IField {
 
     @Override
     public List<IMove> getAvailableMoves() {
-        for (int i = 0; i < board.length; i++)
-        {
-            for (int j = 0; j < board.length; j++)
-            {
-                if (board[i][j].equals(IField.EMPTY_FIELD) && isInActiveMicroboard(i, j))
-                {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                if (board[i][j].equals(IField.EMPTY_FIELD) && isInActiveMicroboard(i, j)) {
                     moves.add(new Move(i, j));
                 }
             }
@@ -90,8 +87,7 @@ public class GameField implements IField {
 
     @Override
     public Boolean isInActiveMicroboard(int x, int y) {
-        //return macroBoard[x][y] == AVAILABLE_FIELD;
-        return true;
+        return macroBoard[x][y] == AVAILABLE_FIELD;
     }
 
     @Override
@@ -117,5 +113,5 @@ public class GameField implements IField {
     public void updateBoard(int x, int y, byte player) {
         board[x][y] = player == 1 ? "O" : "X";
     }
-    
+
 }

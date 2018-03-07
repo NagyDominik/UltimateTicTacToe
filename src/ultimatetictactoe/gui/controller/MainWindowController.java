@@ -6,21 +6,19 @@
 package ultimatetictactoe.gui.controller;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
-import javafx.beans.value.ChangeListener;
-import javafx.collections.ListChangeListener;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import ultimatetictactoe.bll.move.Move;
 import ultimatetictactoe.gui.model.Model;
 
 /**
@@ -41,7 +39,6 @@ public class MainWindowController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         setUpIds();
-        winListener();
     }
 
     @FXML
@@ -64,12 +61,12 @@ public class MainWindowController implements Initializable {
             throw new Exception("Unable to play move!");
         }
 
-        if (model.playMove());
+        /*if (model.playMove());
         {
             updateUI();
-        }
-
+        }*/
         disableInactiveButtons(newActiveMacroBoard);
+        updateWins();
     }
 
     /**
@@ -173,26 +170,23 @@ public class MainWindowController implements Initializable {
         }
     }
 
-    private void winListener() {
-        ObservableList<Integer> wins = model.getMacroboardWins();
-        model.getMacroboardWins().addListener((ListChangeListener.Change<? extends Integer> c) -> {
-            wins.forEach((i) -> {
-                gridPaneMain.getChildren().forEach((t) -> {
-                    if (t.getId().equals(i.toString())) {
-                        GridPane p = (GridPane) t;
-                        p.getChildren().forEach((u) -> {
-                            Button butt = (Button) u;
-                            butt.setId("used");
-                            butt.setDisable(true);
-                        });
-                        p.setStyle("-fx-background-color: red");
-                    }
-                });
-            });
-        });
+    private void updateWins() {
+        int pos = 0;
+        List<String> wins = model.getMacroboardWins();
+        for (Node node : gridPaneMain.getChildren()) {
+            System.out.println(wins.get(pos));
+            if (wins.get(pos).toString().equals("0")) {
+                node.setDisable(true);
+                node.setStyle("-fx-background-color: blue");
+            }
+            if (wins.get(pos).toString().equals("1")) {
+                node.setDisable(true);
+                node.setStyle("-fx-background-color: red");
+            }
+            pos++;
+        }
 
     }
-
     private void updateUI() {
         for (Object o : gridPaneMain.getChildren()) {
             GridPane g = (GridPane) o;

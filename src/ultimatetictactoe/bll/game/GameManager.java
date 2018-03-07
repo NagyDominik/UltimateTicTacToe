@@ -31,7 +31,6 @@ public class GameManager {
     private final IGameState currentState;
     private int currentPlayer = 0; //player0 == 0 && player1 == 1
     private GameMode mode = GameMode.HumanVsHuman;
-    private ObservableList<Integer> macroWins = FXCollections.observableArrayList();
     private IBot bot = null;
     private IBot bot2 = null;
 
@@ -95,17 +94,7 @@ public class GameManager {
 
         //Update the currentState
         UpdateBoard(move);
-        UpdateMacroboard(move);
-
-        if (checkMicroboardWin()) {
-            //String[][] newMacroBoard = new String[3][3];
-            //newMacroBoard[]
-            //currentState.getField().setMacroboard();
-            System.out.println("MicroBoardWin");
-            if (checkMacroBoardWin()) {
-                System.out.println("MacroBoardWin");
-            }
-        }
+        checkMacroBoardWin();
 
         //Update currentPlayer
         currentPlayer = (currentPlayer + 1) % 2;
@@ -167,11 +156,6 @@ public class GameManager {
     private void UpdateBoard(IMove move) {
         GameField field = (GameField) currentState.getField();
         field.updateBoard(move.getX(), move.getY(), (byte) currentPlayer);
-        System.out.println(checkMicroboardWin());
-    }
-
-    private void UpdateMacroboard(IMove move) {
-        currentState.getField().getMacroboard()[1][1] = String.valueOf(currentPlayer);
         System.out.println(checkMicroboardWin());
     }
 
@@ -247,54 +231,31 @@ public class GameManager {
         String[][] uboard = currentState.getField().getMacroboard();
         uboard[row][col] = String.valueOf(this.currentPlayer);
         currentState.getField().setMacroboard(uboard);
-        if (!macroWins.contains(col + row * 3)) {
-            macroWins.add(col + row * 3);
-        }
     }
 
     //TODO: make this not ugly as fuck
     private Boolean checkMacroBoardWin() {
         String[][] macroBoard = currentState.getField().getMacroboard();
-        //Check first row
-        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[0][1]) && macroBoard[0][1].equals(macroBoard[0][2])) {
+        for (int i = 0; i < 3; i++) {
+            if (macroBoard[i][0] != null && macroBoard[i][1] == macroBoard[i][0] && macroBoard[i][2] == macroBoard[i][0]) {
+                return true;
+            }
+            if (macroBoard[0][i] != null && macroBoard[i][1] == macroBoard[i][0] && macroBoard[i][2] == macroBoard[i][0]) {
+                return true;
+            }
+        }
+        if (macroBoard[1][1] != null && macroBoard[0][0] == macroBoard[1][1] && macroBoard[2][2] == macroBoard[1][1]) {
             return true;
         }
-        //Check second row
-        if (!macroBoard[1][0].equals("-1") && macroBoard[1][0].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[1][2])) {
+        if (macroBoard[1][1] != null && macroBoard[2][0] == macroBoard[1][1] && macroBoard[0][2] == macroBoard[1][1]) {
             return true;
         }
-        //Check third row
-        if (!macroBoard[2][0].equals("-1") && macroBoard[2][0].equals(macroBoard[2][1]) && macroBoard[2][1].equals(macroBoard[2][2])) {
-            return true;
-        }
-
-        //Check first column
-        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[1][0]) && macroBoard[1][0].equals(macroBoard[2][0])) {
-            return true;
-        }
-        //Check second column
-        if (!macroBoard[0][1].equals("-1") && macroBoard[0][1].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[2][1])) {
-            return true;
-        }
-        //Check third row
-        if (!macroBoard[0][2].equals("-1") && macroBoard[0][2].equals(macroBoard[1][2]) && macroBoard[1][2].equals(macroBoard[2][2])) {
-            return true;
-        }
-
-        //Check diagonals
-        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[2][2])) {
-            return true;
-        }
-        if (!macroBoard[0][2].equals("-1") && macroBoard[0][2].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[0][2])) {
-            return true;
-        }
-
         return false;
     }
 
-    public ObservableList<Integer> getMacroboardWins() {
+    public String[][] getMacroboardWins() {
         checkMicroboardWin();
-        return this.macroWins;
+        return currentState.getField().getMacroboard();
     }
 
     public int getFieldState(int x, int y) {

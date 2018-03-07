@@ -16,9 +16,9 @@
       </ImageView>
       <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" ellipsisString="" focusTraversable="false" layoutX="140.0" layoutY="254.0" mnemonicParsing="false" onAction="#humanVsHuman" prefHeight="52.0" prefWidth="276.0" text="Button" textOverrun="CLIP" AnchorPane.bottomAnchor="436.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="139.0" AnchorPane.topAnchor="253.0" />
       <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" ellipsisString="" focusTraversable="false" layoutX="140.0" layoutY="427.0" mnemonicParsing="false" onAction="#computerVsComputer" prefHeight="52.0" prefWidth="276.0" textOverrun="CLIP" AnchorPane.bottomAnchor="262.0" AnchorPane.topAnchor="427.0" />
-      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" ellipsisString="" focusTraversable="false" layoutX="140.0" layoutY="341.0" mnemonicParsing="false" onAction="#humanVsComputer" prefHeight="59.0" prefWidth="276.0" textOverrun="CLIP" AnchorPane.bottomAnchor="347.0" AnchorPane.topAnchor="341.0" />
+      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" ellipsisString="" focusTraversable="false" layoutX="140.0" layoutY="341.0" mnemonicParsing="false" onAction="#humanVsComputer" prefHeight="59.0" prefWidth="276.0" text="Button" textOverrun="CLIP" AnchorPane.bottomAnchor="345.0" AnchorPane.topAnchor="341.0" />
       <Label fx:id="label" layoutX="151.0" layoutY="48.0" />
-      <JFXButton focusTraversable="false" layoutX="14.0" layoutY="691.0" onAction="#sajtHelp" text="How to play?" textFill="WHITE">
+      <JFXButton focusTraversable="false" layoutX="14.0" layoutY="691.0" onAction="#howToPlay" text="How to play?" textFill="WHITE">
          <font>
             <Font name="Exo 2 Black" size="17.0" />
          </font>

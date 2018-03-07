@@ -43,11 +43,12 @@ public class GameModesController implements Initializable {
 
     @FXML
     private void humanVsHuman(ActionEvent event) throws Exception {
-        model.setGameManagerHvH();
+        model.setGameManageHvH();
         loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/MainWindow.fxml"));
         Parent root = (Parent) loader.load();
         Stage stage = (Stage) label.getScene().getWindow();
         stage.setScene(new Scene(root));
+        stage.setTitle("Game mode : Human vs Human");
         stage.setResizable(false);
         stage.show();
     }
@@ -59,17 +60,26 @@ public class GameModesController implements Initializable {
         Parent root = (Parent) loader.load();
         Stage stage = (Stage) label.getScene().getWindow();
         stage.setScene(new Scene(root));
+        stage.setTitle("Game mode : Human vs Computer");
         stage.setResizable(false);
         stage.show();
     }
 
     @FXML
-    private void computerVsComputer(ActionEvent event) {
+    private void computerVsComputer(ActionEvent event) throws IOException {
+        model.setGameManageBvB();
+        loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/MainWindow.fxml"));
+        Parent root = (Parent) loader.load();
+        Stage stage = (Stage) label.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Game mode : Computer vs Computer");
+        stage.setResizable(false);
+        stage.show();
+        
     }
    
-
     @FXML
-    private void sajtHelp(ActionEvent event) throws IOException {
+    private void howToPlay(ActionEvent event) throws IOException{
         loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/HelpWindow.fxml"));
         Parent root = (Parent) loader.load();
         Stage stage = (Stage) lbl.getScene().getWindow();

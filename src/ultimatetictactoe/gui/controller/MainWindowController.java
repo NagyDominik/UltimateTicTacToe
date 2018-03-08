@@ -15,7 +15,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -98,6 +100,14 @@ public class MainWindowController implements Initializable {
 
     private void disableInactiveButtons(int id) {
         String idString = Integer.toString(id);
+        if (id == -1) {
+            gridPaneMain.getChildren().forEach((t)
+                    -> {
+                GridPane p = (GridPane) t;
+                p.setDisable(true);
+            });
+            return;
+        }
         if (model.getMacroboardWins().get(id).toString() == IField.AVAILABLE_FIELD) {
             gridPaneMain.getChildren().forEach((t)
                     -> {
@@ -182,7 +192,11 @@ public class MainWindowController implements Initializable {
             }
             pos++;
         }
-
+        if (model.checkWin()) {
+            disableInactiveButtons(-1);
+            Alert a = new Alert(Alert.AlertType.INFORMATION, "Winner: Player " + model.getCurrentPlayer(), ButtonType.OK);
+            a.show();
+        }
     }
 
     private void updateUI() {

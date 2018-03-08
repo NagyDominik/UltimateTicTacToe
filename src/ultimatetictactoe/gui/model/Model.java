@@ -81,4 +81,8 @@ public class Model {
         return gamemanager.getFieldState(x, y);
     }
 
+    public Boolean checkWin() {
+        return gamemanager.checkMacroBoardWin();
+    }
+
 }

@@ -239,21 +239,57 @@ public class GameManager {
         }
     }
 
-    //TODO: make this not ugly as fuck
-    private Boolean checkMacroBoardWin() {
+    public Boolean checkMacroBoardWin() {
         String[][] macroBoard = currentState.getField().getMacroboard();
-        for (int i = 0; i < 3; i++) {
-            if (macroBoard[i][0] != null && macroBoard[i][1] == macroBoard[i][0] && macroBoard[i][2] == macroBoard[i][0]) {
+        /*for (int i = 0; i < 3; i++) {
+            if (!macroBoard[i][0].equals("-1") && macroBoard[i][1] == macroBoard[i][0] && macroBoard[i][2] == macroBoard[i][0]) {
+                System.out.println("TRUE");
                 return true;
             }
-            if (macroBoard[0][i] != null && macroBoard[i][1] == macroBoard[i][0] && macroBoard[i][2] == macroBoard[i][0]) {
+            if (!macroBoard[0][i].equals("-1") && macroBoard[1][i] == macroBoard[0][i] && macroBoard[2][i] == macroBoard[0][i]) {
+                System.out.println("TRUE");
                 return true;
             }
         }
-        if (macroBoard[1][1] != null && macroBoard[0][0] == macroBoard[1][1] && macroBoard[2][2] == macroBoard[1][1]) {
+        if (!macroBoard[1][1].equals("-1") && macroBoard[0][0] == macroBoard[1][1] && macroBoard[2][2] == macroBoard[1][1]) {
+            System.out.println("TRUE");
             return true;
         }
-        if (macroBoard[1][1] != null && macroBoard[2][0] == macroBoard[1][1] && macroBoard[0][2] == macroBoard[1][1]) {
+        if (!macroBoard[1][1].equals("-1") && macroBoard[2][0] == macroBoard[1][1] && macroBoard[0][2] == macroBoard[1][1]) {
+            System.out.println("TRUE");
+            return true;
+        }
+        System.out.println("FALSE");
+        return false;*/
+        //Check first row
+        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[0][1]) && macroBoard[0][1].equals(macroBoard[0][2])) {
+            return true;
+        }
+        //Check second row
+        if (!macroBoard[1][0].equals("-1") && macroBoard[1][0].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[1][2])) {
+            return true;
+        }
+        //Check third row
+        if (!macroBoard[2][0].equals("-1") && macroBoard[2][0].equals(macroBoard[2][1]) && macroBoard[2][1].equals(macroBoard[2][2])) {
+            return true;
+        }
+        //Check first column
+        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[1][0]) && macroBoard[1][0].equals(macroBoard[2][0])) {
+            return true;
+        }
+        //Check second column
+        if (!macroBoard[0][1].equals("-1") && macroBoard[0][1].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[2][1])) {
+            return true;
+        }
+        //Check third column
+        if (!macroBoard[0][2].equals("-1") && macroBoard[0][2].equals(macroBoard[1][2]) && macroBoard[1][2].equals(macroBoard[2][2])) {
+            return true;
+        }
+        //Check diagonals
+        if (!macroBoard[0][0].equals("-1") && macroBoard[0][0].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[2][2])) {
+            return true;
+        }
+        if (!macroBoard[0][2].equals("-1") && macroBoard[0][2].equals(macroBoard[1][1]) && macroBoard[1][1].equals(macroBoard[0][2])) {
             return true;
         }
         return false;

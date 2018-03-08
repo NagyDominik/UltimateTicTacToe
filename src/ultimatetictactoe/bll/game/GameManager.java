@@ -99,12 +99,8 @@ public class GameManager {
         UpdateBoard(move);
 
         //Update currentPlayer
-        updateCurrentPlayer();
-        return true;
-    }
-
-    private void updateCurrentPlayer() {
         currentPlayer = (currentPlayer + 1) % 2;
+        return true;
     }
 
     /**

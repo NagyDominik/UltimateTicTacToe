@@ -14,6 +14,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import ultimatetictactoe.gui.model.Model;
@@ -30,7 +32,7 @@ public class GameModesController implements Initializable {
     @FXML
     private Label lbl;
     FXMLLoader loader = new FXMLLoader();
-    
+
     private Model model;
 
     /**
@@ -39,7 +41,7 @@ public class GameModesController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         model = Model.getInstance();
-    }    
+    }
 
     @FXML
     private void humanVsHuman(ActionEvent event) throws Exception {
@@ -55,31 +57,33 @@ public class GameModesController implements Initializable {
 
     @FXML
     private void humanVsComputer(ActionEvent event) throws IOException {
-        model.setGameManageHvB();
+        comingSoon();
+        /*model.setGameManageHvB();
         loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/MainWindow.fxml"));
         Parent root = (Parent) loader.load();
         Stage stage = (Stage) label.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.setTitle("Game mode : Human vs Computer");
         stage.setResizable(false);
-        stage.show();
+        stage.show();*/
     }
 
     @FXML
     private void computerVsComputer(ActionEvent event) throws IOException {
-        model.setGameManageBvB();
+        comingSoon();
+        /*model.setGameManageBvB();
         loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/MainWindow.fxml"));
         Parent root = (Parent) loader.load();
         Stage stage = (Stage) label.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.setTitle("Game mode : Computer vs Computer");
         stage.setResizable(false);
-        stage.show();
-        
+        stage.show();*/
+
     }
-   
+
     @FXML
-    private void howToPlay(ActionEvent event) throws IOException{
+    private void howToPlay(ActionEvent event) throws IOException {
         loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/HelpWindow.fxml"));
         Parent root = (Parent) loader.load();
         Stage stage = (Stage) lbl.getScene().getWindow();
@@ -88,7 +92,11 @@ public class GameModesController implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-    
 
-    
+    private void comingSoon() {
+        Alert a = new Alert(Alert.AlertType.INFORMATION, "COMING SOON!", ButtonType.OK);
+        a.setHeaderText("This game mode is currently unavailable!");
+        a.show();
+    }
+
 }

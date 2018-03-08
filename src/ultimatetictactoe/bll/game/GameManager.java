@@ -112,13 +112,8 @@ public class GameManager {
         assert (mode != GameMode.HumanVsHuman);
 
         //Check if player is bot, if so, get bot input and update the state based on that.
-        if (mode == GameMode.HumanVsComputer && currentPlayer == 1) {
-            //Check bot is not equal to null, and throw an exception if it is.
-            assert (bot != null);
-
+        if (mode == GameMode.HumanVsComputer) {
             IMove botMove = bot.doMove(currentState);
-
-            //Be aware that your bots might perform illegal moves.
             return UpdateGame(botMove);
         }
 
@@ -126,24 +121,32 @@ public class GameManager {
         assert (bot != null);
         assert (bot2 != null);
 
-        //TODO: Implement a bot vs bot Update.
-        throw new UnsupportedOperationException("Not supported yet.");
+        //Check if player is bot, if so, get bot input and update the state based on that.
+        if (mode == GameMode.ComputerVsComputer) {
+            assert (bot != null);
+            assert (bot2 != null);
+            IMove botMove = currentPlayer == 0 ? bot.doMove(currentState) : bot2.doMove(currentState);
+            return UpdateGame(botMove);
+        }
+        return false;
     }
 
-    public void setNewActiveMicroboard(int id) {
+    /*public void setNewActiveMicroboard(int id) {
         int x = getMacroX(id);
         int y = getMacroY(id);
         String newActiveBoard[][] = new String[3][3];
         newActiveBoard[x][y] = IField.AVAILABLE_FIELD;
         currentState.getField().setMacroboard(newActiveBoard);
-    }
-
+    }*/
     private Boolean VerifyMoveLegality(IMove move) {
         //Test if the move is legal   
         //NOTE: should also check whether the move is placed on an occupied spot.
         System.out.println("Checking move validity against macroboard available field");
         System.out.println("Not currently checking move validity actual board");
         Boolean legal = true;
+        /*if (currentState.getField().getMacroboard()[move.getX() / 3][move.getY() / 3] != IField.AVAILABLE_FIELD) {
+            legal = false;
+        }*/
         if (currentState.getField().getBoard()[move.getX()][move.getY()] != IField.EMPTY_FIELD) {
             legal = false;
         }
@@ -156,7 +159,7 @@ public class GameManager {
     private void UpdateBoard(IMove move) {
         GameField field = (GameField) currentState.getField();
         field.updateBoard(move.getX(), move.getY(), (byte) currentPlayer);
-        System.out.println(checkMicroboardWin());
+        //System.out.println(checkMicroboardWin());
     }
 
     private int getMacroX(int id) {
@@ -214,11 +217,11 @@ public class GameManager {
                         checkwin = true;
                     }
                 }
-                if (board[jx][jx] != IField.EMPTY_FIELD && board[jx][jx] == board[jx + 1][jx + 1] && board[jx + 2][jx + 2] == board[jx + 1][jx + 1]) {
+                if (board[jx][ix] != IField.EMPTY_FIELD && board[jx + 1][ix + 1] == board[jx][ix] && board[jx + 2][ix + 2] == board[jx][ix]) {
                     setMacroWin(i, j);
                     checkwin = true;
                 }
-                if (board[jx + 2][jx] != IField.EMPTY_FIELD && board[jx + 1][jx + 1] == board[jx + 2][jx] && board[jx][jx + 2] == board[jx + 1][jx + 1]) {
+                if (board[jx + 2][ix] != IField.EMPTY_FIELD && board[jx + 1][ix + 1] == board[jx + 2][ix] && board[jx][ix + 2] == board[jx + 1][ix + 1]) {
                     setMacroWin(i, j);
                     checkwin = true;
                 }
@@ -229,8 +232,11 @@ public class GameManager {
 
     private void setMacroWin(int col, int row) {
         String[][] uboard = currentState.getField().getMacroboard();
-        uboard[row][col] = String.valueOf(this.currentPlayer);
-        currentState.getField().setMacroboard(uboard);
+        System.out.println(uboard[col][row]);
+        if (uboard[col][row].equals(IField.AVAILABLE_FIELD)) {
+            uboard[row][col] = String.valueOf(this.currentPlayer);
+            currentState.getField().setMacroboard(uboard);
+        }
     }
 
     //TODO: make this not ugly as fuck

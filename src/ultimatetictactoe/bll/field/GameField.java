@@ -87,7 +87,7 @@ public class GameField implements IField {
 
     @Override
     public Boolean isInActiveMicroboard(int x, int y) {
-        return macroBoard[x][y] == AVAILABLE_FIELD;
+        return macroBoard[x/3][y/3] == AVAILABLE_FIELD;
     }
 
     @Override

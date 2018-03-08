@@ -19,6 +19,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import ultimatetictactoe.bll.field.IField;
 import ultimatetictactoe.gui.model.Model;
 
 /**
@@ -29,7 +30,6 @@ public class MainWindowController implements Initializable {
 
     @FXML
     private GridPane gridPaneMain;
-
     @FXML
     private Label lblTurn;
 
@@ -46,25 +46,21 @@ public class MainWindowController implements Initializable {
         Button srcButton = (Button) event.getSource();
         int buttonId = Integer.parseInt(srcButton.getId());
         int macroId = Integer.parseInt(srcButton.getParent().getId());
-
         int x = getX(buttonId);
         int y = getY(buttonId);
-
-        setButtonXO(srcButton);
-
         int newActiveMacroBoard = board[x][y];
 
-        String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId + "\nNew micro board: " + newActiveMacroBoard;
-        System.out.println(result);
+        setButtonXO(srcButton);
+        //String result = "The id of the button: " + buttonId + ". \nCoordinates: (" + x + "; " + y + "). " + "\nMacroBoard id: " + macroId + "\nNew micro board: " + newActiveMacroBoard;
+        //System.out.println(result);
         model.setNewMicroboard(newActiveMacroBoard);
         if (!model.playMove(x, y)) {
             throw new Exception("Unable to play move!");
         }
-
-        /*if (model.playMove());
-        {
+        /*if ( model.playMove()) {
             updateUI();
         }*/
+
         disableInactiveButtons(newActiveMacroBoard);
         updateWins();
     }
@@ -102,25 +98,27 @@ public class MainWindowController implements Initializable {
 
     private void disableInactiveButtons(int id) {
         String idString = Integer.toString(id);
-        gridPaneMain.getChildren().forEach((t)
-                -> {
-            GridPane p = (GridPane) t;
-            if (!p.getId().equals(idString)) {
-                p.getChildren().forEach((r)
-                        -> {
-                    Button b = (Button) r;
-                    b.setDisable(true);
-                });
-            } else {
-                p.getChildren().forEach((r)
-                        -> {
-                    Button b = (Button) r;
-                    if (!b.getId().equals("used")) {
-                        b.setDisable(false);
-                    }
-                });
-            }
-        });
+        if (model.getMacroboardWins().get(id).toString() == IField.AVAILABLE_FIELD) {
+            gridPaneMain.getChildren().forEach((t)
+                    -> {
+                GridPane p = (GridPane) t;
+                if (!p.getId().equals(idString)) {
+                    p.setDisable(true);
+                } else {
+                    p.setDisable(false);
+                }
+            });
+        } else {
+            gridPaneMain.getChildren().forEach((t)
+                    -> {
+                GridPane p = (GridPane) t;
+                if (p.getId().equals(idString)) {
+                    p.setDisable(true);
+                } else {
+                    p.setDisable(false);
+                }
+            });
+        }
     }
 
     @FXML
@@ -177,16 +175,17 @@ public class MainWindowController implements Initializable {
             System.out.println(wins.get(pos));
             if (wins.get(pos).toString().equals("0")) {
                 node.setDisable(true);
-                node.setStyle("-fx-background-color: blue");
+                node.setStyle("-fx-background-color: #C00D0D");
             }
             if (wins.get(pos).toString().equals("1")) {
                 node.setDisable(true);
-                node.setStyle("-fx-background-color: red");
+                node.setStyle("-fx-background-color: #009FE3");
             }
             pos++;
         }
 
     }
+
     private void updateUI() {
         for (Object o : gridPaneMain.getChildren()) {
             GridPane g = (GridPane) o;

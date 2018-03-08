@@ -23,7 +23,6 @@ public class Model {
     private static Model instance;
     private GameManager gamemanager;
     private int macroboardId;
-
    
     public static Model getInstance() {
         if (instance == null) {

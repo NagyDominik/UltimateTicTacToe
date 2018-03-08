@@ -172,12 +172,11 @@ public class MainWindowController implements Initializable {
         int pos = 0;
         List<String> wins = model.getMacroboardWins();
         for (Node node : gridPaneMain.getChildren()) {
-            System.out.println(wins.get(pos));
-            if (wins.get(pos).toString().equals("0")) {
+            if (wins.get(pos).equals("0")) {
                 node.setDisable(true);
                 node.setStyle("-fx-background-color: #C00D0D");
             }
-            if (wins.get(pos).toString().equals("1")) {
+            if (wins.get(pos).equals("1")) {
                 node.setDisable(true);
                 node.setStyle("-fx-background-color: #009FE3");
             }

@@ -1,7 +1,7 @@
 package ultimatetictactoe.bll.game;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import java.util.ArrayList;
+import java.util.List;
 import ultimatetictactoe.bll.bot.IBot;
 import ultimatetictactoe.bll.field.GameField;
 import ultimatetictactoe.bll.field.IField;
@@ -91,15 +91,16 @@ public class GameManager {
         if (!VerifyMoveLegality(move)) {
             return false;
         }
-
         //Update the currentState
         UpdateBoard(move);
-        checkMacroBoardWin();
 
         //Update currentPlayer
-        currentPlayer = (currentPlayer + 1) % 2;
-
+        updateCurrentPlayer();
         return true;
+    }
+
+    private void updateCurrentPlayer() {
+        currentPlayer = (currentPlayer + 1) % 2;
     }
 
     /**
@@ -209,7 +210,7 @@ public class GameManager {
                 int jx = j * 3;
                 for (int k = 0; k < 3; k++) {
                     if (board[ix + k][jx] != IField.EMPTY_FIELD && board[ix + k][jx + 1] == board[ix + k][jx] && board[ix + k][jx + 2] == board[ix + k][jx]) {
-                        setMacroWin(i, j);
+                        setMacroWin(j, i);
                         checkwin = true;
                     }
                     if (board[jx][ix + k] != IField.EMPTY_FIELD && board[jx + 1][ix + k] == board[jx][ix + k] && board[jx + 2][ix + k] == board[jx][ix + k]) {
@@ -230,11 +231,10 @@ public class GameManager {
         return checkwin;
     }
 
-    private void setMacroWin(int col, int row) {
+    private void setMacroWin(int row, int col) {
         String[][] uboard = currentState.getField().getMacroboard();
-        System.out.println(uboard[col][row]);
         if (uboard[col][row].equals(IField.AVAILABLE_FIELD)) {
-            uboard[row][col] = String.valueOf(this.currentPlayer);
+            uboard[col][row] = String.valueOf(this.currentPlayer);
             currentState.getField().setMacroboard(uboard);
         }
     }

@@ -72,6 +72,8 @@ public class Model {
                 ids.add(macroboard[i][j]);
             }
         }
+        System.out.println("MODEL WINS");
+        System.out.println(ids);
         return ids;
     }
 

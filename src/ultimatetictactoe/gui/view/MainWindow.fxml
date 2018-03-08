@@ -591,7 +591,7 @@
          </image>
       </ImageView>
       <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="14.0" layoutY="11.0" onAction="#gameModeChooser" prefHeight="38.0" prefWidth="150.0" text="Button" />
-      <Label fx:id="lblPlayer" alignment="CENTER" layoutX="201.0" layoutY="14.0" prefHeight="38.0" prefWidth="318.0" textFill="WHITE">
+      <Label fx:id="lblPlayer" alignment="CENTER" layoutX="201.0" layoutY="14.0" prefHeight="38.0" prefWidth="318.0" text="Player: 0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>

@@ -19,11 +19,11 @@ import ultimatetictactoe.bll.move.Move;
  * @author Dominik
  */
 public class Model {
- 
+
     private static Model instance;
     private GameManager gamemanager;
     private int macroboardId;
-   
+
     public static Model getInstance() {
         if (instance == null) {
             instance = new Model();
@@ -38,8 +38,8 @@ public class Model {
     public void setGameManageHvB() {
         this.gamemanager = new GameManager(new GameState(new GameField()), new MCBot());
     }
-    
-    public void setGameManageBvB(){
+
+    public void setGameManageBvB() {
         this.gamemanager = new GameManager(new GameState(new GameField()), new MCBot(), new MCBot());
     }
 
@@ -85,4 +85,8 @@ public class Model {
         return gamemanager.checkMacroBoardWin();
     }
 
+    public String getGamemode() {
+        return gamemanager.getGamemode();
+    }
+    
 }

@@ -19,6 +19,10 @@ import ultimatetictactoe.bll.move.IMove;
  */
 public class GameManager {
 
+    public String getGamemode() {
+        return mode.name();
+    }
+
     /**
      * Three different game modes.
      */

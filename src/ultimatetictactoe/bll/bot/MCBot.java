@@ -7,7 +7,6 @@ package ultimatetictactoe.bll.bot;
 
 import java.util.List;
 import java.util.Random;
-import ultimatetictactoe.bll.bot.IBot;
 import ultimatetictactoe.bll.game.IGameState;
 import ultimatetictactoe.bll.move.IMove;
 

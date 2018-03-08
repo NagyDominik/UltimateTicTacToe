@@ -59,12 +59,12 @@ public class MainWindowController implements Initializable {
         if (!model.playMove(x, y)) {
             throw new Exception("Unable to play move!");
         }
-        /*if ( model.playMove()) {
+        if (!model.getGamemode().equals("HumanVsHuman") && model.playMove()) {
             updateUI();
-        }*/
-
+        }
         disableInactiveButtons(newActiveMacroBoard);
         updateWins();
+        setPlayer();
     }
 
     /**
@@ -186,7 +186,7 @@ public class MainWindowController implements Initializable {
                 node.setDisable(true);
                 node.setStyle("-fx-background-color: #C00D0D");
             }
-            if (wins.get(pos).equals("1"))  {
+            if (wins.get(pos).equals("1")) {
                 node.setDisable(true);
                 node.setStyle("-fx-background-color: #009FE3");
             }
@@ -194,7 +194,8 @@ public class MainWindowController implements Initializable {
         }
         if (model.checkWin()) {
             disableInactiveButtons(-1);
-            Alert a = new Alert(Alert.AlertType.INFORMATION, "Winner: Player " + model.getCurrentPlayer(), ButtonType.OK);
+            Alert a = new Alert(Alert.AlertType.INFORMATION, "", ButtonType.OK);
+            a.setHeaderText("Winner: Player " + ((model.getCurrentPlayer()+1)%2));
             a.show();
         }
     }
@@ -214,8 +215,9 @@ public class MainWindowController implements Initializable {
             }
         }
     }
-        private void setPlayer(){
-            lblPlayer.setText("Player: " + model.getCurrentPlayer());
-            System.out.println(model.getCurrentPlayer()+ "ANYÁD PICSHÁJA");
-        }
+
+    private void setPlayer() {
+        lblPlayer.setText("Player: " + model.getCurrentPlayer());
+        System.out.println(model.getCurrentPlayer() + "ANYÁD PICSHÁJA");
+    }
 }

@@ -585,15 +585,16 @@
             </GridPane>
          </children>
       </GridPane>
-      <Label fx:id="lblTurn" layoutX="210.0" layoutY="2.0" prefHeight="25.0" prefWidth="180.0" textFill="WHITE" AnchorPane.topAnchor="5.0">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font></Label>
       <ImageView fitHeight="38.0" fitWidth="150.0" layoutX="14.0" layoutY="11.0">
          <image>
             <Image url="@../../pics/Névtelen-1.png" />
          </image>
       </ImageView>
       <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="14.0" layoutY="11.0" onAction="#gameModeChooser" prefHeight="38.0" prefWidth="150.0" text="Button" />
+      <Label fx:id="lblPlayer" alignment="CENTER" layoutX="201.0" layoutY="14.0" prefHeight="38.0" prefWidth="318.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

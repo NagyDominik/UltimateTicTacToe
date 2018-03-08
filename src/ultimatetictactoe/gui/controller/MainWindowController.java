@@ -32,11 +32,11 @@ public class MainWindowController implements Initializable {
 
     @FXML
     private GridPane gridPaneMain;
-    @FXML
-    private Label lblTurn;
 
     private final Model model = Model.getInstance();
     private int[][] board = new int[9][9];
+    @FXML
+    private Label lblPlayer;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -135,7 +135,7 @@ public class MainWindowController implements Initializable {
     private void gameModeChooser(ActionEvent event) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/GameModes.fxml"));
         Parent root = (Parent) loader.load();
-        Stage stage = (Stage) lblTurn.getScene().getWindow();
+        Stage stage = (Stage) lblPlayer.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.setResizable(false);
         stage.show();
@@ -186,7 +186,7 @@ public class MainWindowController implements Initializable {
                 node.setDisable(true);
                 node.setStyle("-fx-background-color: #C00D0D");
             }
-            if (wins.get(pos).equals("1")) {
+            if (wins.get(pos).equals("1"))  {
                 node.setDisable(true);
                 node.setStyle("-fx-background-color: #009FE3");
             }
@@ -214,4 +214,8 @@ public class MainWindowController implements Initializable {
             }
         }
     }
+        private void setPlayer(){
+            lblPlayer.setText("Player: " + model.getCurrentPlayer());
+            System.out.println(model.getCurrentPlayer()+ "ANYÁD PICSHÁJA");
+        }
 }

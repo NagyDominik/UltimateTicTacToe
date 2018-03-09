@@ -7,12 +7,17 @@ package ultimatetictactoe.gui.controller;
 
 import com.sun.deploy.uitoolkit.impl.fx.HostServicesFactory;
 import com.sun.javafx.application.HostServicesDelegate;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
@@ -24,6 +29,9 @@ import javafx.stage.Stage;
  */
 public class HelpWindowController implements Initializable {
 
+    @FXML
+    private Label lbl;
+
     /**
      * Initializes the controller class.
      */
@@ -33,6 +41,7 @@ public class HelpWindowController implements Initializable {
     }    
    
     String link = "goo.gl/wf5adF";
+    FXMLLoader loader = new FXMLLoader();
 
     @FXML
     private void openInBrowser(ActionEvent event) throws StringIndexOutOfBoundsException {
@@ -44,6 +53,18 @@ public class HelpWindowController implements Initializable {
         st.setTitle("Game rules");
     	st.show();
 	}
+
+ 
+
+    @FXML
+    private void exitPressed(ActionEvent event) throws Exception  {
+        loader = new FXMLLoader(getClass().getResource("/ultimatetictactoe/gui/view/GameModes.fxml"));
+        Parent root = (Parent) loader.load();
+        Stage stage = (Stage) lbl.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.show();
+     }
     
     
 }

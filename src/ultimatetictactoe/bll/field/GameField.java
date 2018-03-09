@@ -42,6 +42,7 @@ public class GameField implements IField {
 
     @Override
     public List<IMove> getAvailableMoves() {
+        moves.clear();
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
                 if (board[i][j].equals(IField.EMPTY_FIELD) && isInActiveMicroboard(i, j)) {

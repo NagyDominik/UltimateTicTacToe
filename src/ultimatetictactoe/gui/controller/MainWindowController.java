@@ -21,6 +21,8 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import ultimatetictactoe.bll.bot.IBot;
+import ultimatetictactoe.bll.bot.MCBot;
 import ultimatetictactoe.bll.field.IField;
 import ultimatetictactoe.gui.model.Model;
 
@@ -32,12 +34,13 @@ public class MainWindowController implements Initializable {
 
     @FXML
     private GridPane gridPaneMain;
-
-    private final Model model = Model.getInstance();
-    private int[][] board = new int[9][9];
     @FXML
     private Label lblPlayer;
 
+    private final Model model = Model.getInstance();
+    private int[][] board = new int[9][9];
+    private IBot bot = new MCBot();
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         setUpIds();
@@ -59,12 +62,11 @@ public class MainWindowController implements Initializable {
         if (!model.playMove(x, y)) {
             throw new Exception("Unable to play move!");
         }
-        if (!model.getGamemode().equals("HumanVsHuman") && model.playMove()) {
-            updateUI();
-        }
         disableInactiveButtons(newActiveMacroBoard);
         updateWins();
         setPlayer();
+        if (model.getGamemode().equals("HumanVsComputer") && model.playMove()) {
+        }
     }
 
     /**
@@ -195,7 +197,7 @@ public class MainWindowController implements Initializable {
         if (model.checkWin()) {
             disableInactiveButtons(-1);
             Alert a = new Alert(Alert.AlertType.INFORMATION, "", ButtonType.OK);
-            a.setHeaderText("Winner: Player " + ((model.getCurrentPlayer()+1)%2));
+            a.setHeaderText("Winner: Player " + ((model.getCurrentPlayer() + 1) % 2));
             a.show();
         }
     }
